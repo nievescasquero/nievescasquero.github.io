@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nieves Casquero · Ciberseguridad & Peritaje Informático</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f9f8f6;
+    --white: #ffffff;
+    --ink: #1a1a2e;
+    --ink2: #3d3d5c;
+    --muted: #6b6b8a;
+    --border: #e2e2ec;
+    --navy: #1a1a2e;
+    --accent: #c1121f;
+    --accent-light: #fff0f1;
+    --accent-mid: #f8d7da;
+    --blue: #1d4ed8;
+    --blue-light: #eff6ff;
+    --green: #16a34a;
+    --green-light: #f0fdf4;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  .nav-links a {
+    color: var(--ink2); text-decoration: none;
+    font-size: 0.88rem; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-cta {
+    background: var(--navy) !important;
+    color: #fff !important;
+    padding: 0.5rem 1.2rem !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+  }
+  .nav-cta:hover { background: var(--accent) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 9rem 2rem 6rem;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--accent-light);
+    border: 1px solid var(--accent-mid);
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 1.4rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--navy);
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.01em;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+
+  .hero-cta { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 2rem; }
+
+  .btn-primary {
+    background: var(--navy);
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+
+  .btn-secondary {
+    border: 1.5px solid var(--border);
+    color: var(--ink2);
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.92rem;
+    transition: border-color 0.2s, transform 0.15s;
+    display: inline-block;
+    background: var(--white);
+  }
+  .btn-secondary:hover { border-color: var(--ink2); transform: translateY(-1px); }
+
+  .hero-trust {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.8rem; color: var(--muted);
+  }
+  .trust-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; }
+
+  /* HERO RIGHT */
+  .hero-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 24px rgba(26,26,46,0.07);
+  }
+  .hero-card-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .stat-row {
+    display: flex; justify-content: space-between;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+  }
+  .stat-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .stat-label { font-size: 0.85rem; color: var(--ink2); }
+  .stat-value {
+    font-size: 0.85rem; font-weight: 600; color: var(--navy);
+    background: var(--bg);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+  }
+  .stat-value.red { background: var(--accent-light); color: var(--accent); }
+  .stat-value.green { background: var(--green-light); color: var(--green); }
+
+  .platform-tags {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin-top: 1.2rem; padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+  }
+  .ptag {
+    font-size: 0.72rem; font-weight: 500;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    background: var(--bg);
+    color: var(--ink2);
+    border: 1px solid var(--border);
+  }
+
+  /* ── DIVIDER ── */
+  .full-divider { border: none; border-top: 1px solid var(--border); }
+
+  /* ── PROBLEM ── */
+  .section {
+    padding: 5rem 2rem;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .section-lead {
+    color: var(--muted);
+    font-size: 1rem;
+    max-width: 520px;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+  }
+
+  .alert-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 2rem;
+    display: flex; align-items: flex-start; gap: 1rem;
+  }
+  .alert-box .icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .alert-box strong { display: block; margin-bottom: 0.2rem; font-size: 0.95rem; }
+  .alert-box p { font-size: 0.85rem; color: var(--muted); }
+
+  .risks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .risk-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.4rem;
+    transition: box-shadow 0.2s;
+  }
+  .risk-item:hover { box-shadow: 0 4px 16px rgba(26,26,46,0.08); }
+  .risk-icon { font-size: 1.3rem; margin-bottom: 0.6rem; }
+  .risk-item h4 { font-size: 0.88rem; font-weight: 600; margin-bottom: 0.3rem; }
+  .risk-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+  /* ── SERVICES ── */
+  .services-bg {
+    background: var(--navy);
+    padding: 5rem 0;
+  }
+  .services-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .services-bg .eyebrow { color: #8899cc; }
+  .services-bg h2 { color: #fff; }
+  .services-bg .section-lead { color: #8899cc; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .service-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .service-card:hover {
+    background: rgba(255,255,255,0.09);
+    transform: translateY(-2px);
+  }
+  .service-card.featured {
+    background: var(--accent);
+    border-color: var(--accent);
+    grid-column: span 1;
+  }
+  .service-icon { font-size: 1.5rem; margin-bottom: 1rem; }
+  .service-card h3 { font-size: 0.95rem; font-weight: 600; color: #fff; margin-bottom: 0.5rem; }
+  .service-card p { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 1.2rem; }
+  .service-price {
+    font-size: 1rem; font-weight: 700; color: #fff;
+  }
+  .service-price-label { font-size: 0.72rem; color: rgba(255,255,255,0.5); }
+
+  .services-row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .costas-note-dark {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    font-size: 0.83rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 1.2rem;
+  }
+  .costas-note-dark strong { color: rgba(255,255,255,0.8); }
+
+  /* ── PERITAJE ── */
+  .peritaje-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .peritaje-list {
+    list-style: none;
+    margin: 1.5rem 0;
+  }
+  .peritaje-list li {
+    display: flex; align-items: flex-start; gap: 0.7rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--ink2);
+  }
+  .peritaje-list li:last-child { border-bottom: none; }
+  .peritaje-list li::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+  }
+  .peritaje-panel {
+    background: var(--blue-light);
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  .peritaje-panel h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--blue);
+    margin-bottom: 1rem;
+  }
+  .peritaje-panel p {
+    font-size: 0.88rem;
+    color: #1e3a8a;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .peritaje-panel .small { font-size: 0.78rem; color: #3b82f6; }
+
+  /* ── PROCESO ── */
+  .proceso-bg {
+    background: var(--bg);
+    padding: 5rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .proceso-inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+  .proceso-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 2.5rem;
+    position: relative;
+  }
+  .proceso-steps::before {
+    content: '';
+    position: absolute;
+    top: 28px; left: 14%; right: 14%;
+    height: 1px;
+    background: var(--border);
+    z-index: 0;
+  }
+  .paso {
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  .paso-num {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .paso:nth-child(1) .paso-num { border-color: var(--accent); color: var(--accent); }
+  .paso h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .paso p { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+
+  /* ── SOBRE MI ── */
+  .sobre-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .sobre-text h2 { margin-bottom: 1rem; }
+  .sobre-text p {
+    font-size: 0.92rem; color: var(--muted);
+    line-height: 1.8; margin-bottom: 1rem;
+  }
+  .cert-row {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .cert {
+    font-size: 0.75rem; font-weight: 500;
+    padding: 0.3rem 0.7rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--ink2);
+  }
+  .platforms-panel {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 2px 12px rgba(26,26,46,0.05);
+  }
+  .platforms-panel h4 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+  }
+  .prow {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .prow:last-child { border-bottom: none; padding-bottom: 0; }
+  .prow-name { font-size: 0.88rem; font-weight: 500; }
+  .prow-handle {
+    font-size: 0.78rem; color: var(--accent); font-weight: 500;
+  }
+  .prow-badge {
+    font-size: 0.68rem; font-weight: 600;
+    background: var(--green-light); color: var(--green);
+    padding: 0.2rem 0.5rem; border-radius: 4px;
+  }
+
+  /* ── CONTACTO ── */
+  .contacto-bg {
+    background: var(--white);
+    padding: 5rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .contacto-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  .contacto-inner h2 { margin-bottom: 0.8rem; }
+  .contacto-inner .section-lead { margin: 0 auto 2rem; max-width: 480px; }
+  .contacto-links {
+    display: flex; justify-content: center; gap: 1.5rem;
+    flex-wrap: wrap; margin-top: 2rem;
+  }
+  .contacto-link {
+    display: flex; align-items: center; gap: 0.4rem;
+    color: var(--muted); text-decoration: none;
+    font-size: 0.83rem; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .contacto-link:hover { color: var(--navy); }
+  .disponible {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--green-light);
+    border: 1px solid #bbf7d0;
+    color: var(--green);
+    font-size: 0.8rem; font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+  }
+  .disponible::before {
+    content: '';
+    width: 7px; height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ── SCROLL OFFSET for fixed nav ── */
+  #problema, #servicios, #peritaje, #proceso, #sobre-mi, #contacto {
+    scroll-margin-top: 64px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 7rem 1.5rem 3rem; }
+    .risks-grid { grid-template-columns: 1fr 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .services-row2 { grid-template-columns: 1fr; }
+    .peritaje-grid { grid-template-columns: 1fr; }
+    .proceso-steps { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .proceso-steps::before { display: none; }
+    .sobre-grid { grid-template-columns: 1fr; }
+    .section { padding: 3.5rem 1.5rem; }
+    .services-inner { padding: 0 1.5rem; }
+    .proceso-inner { padding: 0 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Nieves <span>Casquero</span></a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#peritaje">Peritaje Judicial</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#contacto" class="nav-cta">Consulta gratuita</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div style="background:var(--white); border-bottom:1px solid var(--border);">
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Ciberseguridad · Forense Digital · Peritaje Judicial</div>
+      <h1>Tu empresa, protegida.<br>Tus pruebas digitales,<br><em>válidas ante un juez.</em></h1>
+      <p class="hero-sub">
+        Especialista en seguridad web y peritaje informático forense. Identifico vulnerabilidades reales en tu web y emito informes periciales con validez legal en procedimientos judiciales.
+      </p>
+      <div class="hero-cta">
+        <a href="#contacto" class="btn-primary">Consulta gratuita →</a>
+        <a href="#servicios" class="btn-secondary">Ver servicios y precios</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-dot"></div>
+        Disponible · Servicio remoto para toda España · Respuesta en 24h
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-card-label">Perfil profesional</div>
+      <div class="stat-row">
+        <span class="stat-label">Especialidad</span>
+        <span class="stat-value">Seguridad web & Forense</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Certificaciones</span>
+        <span class="stat-value">CompTIA PenTest+</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Formación</span>
+        <span class="stat-value">Máster Ciberseguridad</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Bug bounty</span>
+        <span class="stat-value red">HackerOne · Bugcrowd</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Cobertura</span>
+        <span class="stat-value green">Toda España</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">CiberEstrechoCON</span>
+        <span class="stat-value">Organizadora 2025</span>
+      </div>
+      <div class="platform-tags">
+        <span class="ptag">OWASP Top 10</span>
+        <span class="ptag">ISO 27037</span>
+        <span class="ptag">Burp Suite</span>
+        <span class="ptag">Volatility</span>
+        <span class="ptag">Forense Digital</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<section class="section" id="problema">
+  <div class="eyebrow">El riesgo real</div>
+  <h2>La mayoría de empresas descubren<br>sus vulnerabilidades cuando ya es tarde.</h2>
+  <p class="section-lead">
+    El 65% de los incidentes graves en pymes españolas ocurren en sistemas con vulnerabilidades conocidas. Una auditoría preventiva cuesta entre 500€ y 4.000€. Recuperarse de un ataque, más de 42.000€.
+  </p>
+
+  <div class="alert-box">
+    <div class="icon">⚠️</div>
+    <div>
+      <strong>¿No tienes prueba digital si hay un litigio?</strong>
+      <p>Sin un informe pericial informático correcto, las capturas de pantalla y los chats no tienen validez legal ante un tribunal español. Una cadena de custodia inadecuada puede invalidar toda la prueba.</p>
+    </div>
+  </div>
+
+  <div class="risks-grid">
+    <div class="risk-item">
+      <div class="risk-icon">🔓</div>
+      <h4>Accesos no autorizados</h4>
+      <p>Formularios, paneles de administración o APIs sin protección adecuada.</p>
+    </div>
+    <div class="risk-item">
+      <div class="risk-icon">📂</div>
+      <h4>Datos expuestos</h4>
+      <p>Información de clientes accesible por error de configuración del servidor.</p>
+    </div>
+    <div class="risk-item">
+      <div class="risk-icon">🦠</div>
+      <h4>Malware silencioso</h4>
+      <p>Código malicioso instalado en tu web que roba datos sin que lo sepas.</p>
+    </div>
+    <div class="risk-item">
+      <div class="risk-icon">⚖️</div>
+      <h4>Incumplimiento RGPD</h4>
+      <p>Sanciones de hasta 20 millones € por falta de medidas de seguridad técnicas.</p>
+    </div>
+    <div class="risk-item">
+      <div class="risk-icon">🔍</div>
+      <h4>Sin prueba judicial</h4>
+      <p>Evidencias digitales inválidas por falta de cadena de custodia correcta.</p>
+    </div>
+    <div class="risk-item">
+      <div class="risk-icon">📉</div>
+      <h4>Reputación comprometida</h4>
+      <p>Un incidente público puede destruir la confianza de tus clientes en días.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="full-divider">
+
+<!-- SERVICIOS -->
+<div class="services-bg" id="servicios">
+  <div class="services-inner">
+    <div class="eyebrow">Servicios</div>
+    <h2 style="color:#fff;">Qué puedo hacer por ti</h2>
+    <p class="section-lead">Precios transparentes basados en el mercado español 2026. Presupuesto cerrado antes de empezar, sin sorpresas.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🔍</div>
+        <h3>Auditoría de seguridad web</h3>
+        <p>Análisis manual de vulnerabilidades OWASP Top 10: XSS, inyección SQL, CSRF, IDOR, CORS. Informe técnico + versión ejecutiva.</p>
+        <div class="service-price">500€ – 1.500€</div>
+        <div class="service-price-label">Entrega en 48–72h</div>
+      </div>
+
+      <div class="service-card featured">
+        <div class="service-icon">🛡️</div>
+        <h3>Deep Security Assessment</h3>
+        <p>Pentesting completo, explotación manual, informe técnico + ejecutivo y llamada de explicación de 30 min incluida.</p>
+        <div class="service-price">1.500€ – 4.000€</div>
+        <div class="service-price-label">Servicio más completo</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⚖️</div>
+        <h3>Informe pericial informático</h3>
+        <p>Dictamen pericial con validez legal: cadena de custodia, metodología ISO 27037 y conclusiones para procedimiento judicial.</p>
+        <div class="service-price">600€ – 2.500€</div>
+        <div class="service-price-label">Ratificación disponible</div>
+      </div>
+    </div>
+
+    <div class="services-row2">
+      <div class="service-card">
+        <div class="service-icon">🦠</div>
+        <h3>Análisis de malware e incidente</h3>
+        <p>Detección y análisis de sitios comprometidos, vector de entrada e informe de remediación.</p>
+        <div class="service-price">600€ – 2.000€</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📡</div>
+        <h3>Monitorización mensual</h3>
+        <p>Revisión continua, alertas tempranas de nuevas vulnerabilidades y soporte por email.</p>
+        <div class="service-price">80€ – 200€ / mes</div>
+      </div>
+    </div>
+
+    <div class="costas-note-dark">
+      <strong>ℹ️ Los honorarios periciales son recuperables:</strong> Si ganas el juicio y hay condena en costas, la parte contraria abona los gastos del perito. Consulta con tu abogado.
+    </div>
+  </div>
+</div>
+
+<!-- PERITAJE -->
+<section class="section" id="peritaje">
+  <div class="peritaje-grid">
+    <div>
+      <div class="eyebrow">Peritaje judicial informático</div>
+      <h2>Prueba digital con validez<br>legal ante el tribunal.</h2>
+      <p class="section-lead" style="margin-bottom:0;">Para abogados, empresas y particulares que necesitan evidencias digitales en un procedimiento civil, penal o laboral.</p>
+      <ul class="peritaje-list">
+        <li>Certificación de conversaciones de WhatsApp y email</li>
+        <li>Análisis forense de ordenadores y móviles</li>
+        <li>Publicaciones en redes sociales como prueba</li>
+        <li>Cadena de custodia conforme a ISO 27037</li>
+        <li>Detección de accesos no autorizados</li>
+        <li>Fraude digital, estafas y acoso telemático</li>
+        <li>Análisis de deepfakes y manipulación digital</li>
+        <li>Ratificación presencial ante tribunal</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="peritaje-panel">
+        <h4>Para quién es este servicio</h4>
+        <p>
+          <strong>Despachos de abogados</strong> que necesitan un perito informático fiable para aportar dictamen técnico en sala.
+        </p>
+        <p>
+          <strong>Empresas</strong> con litigios activos relacionados con fraude digital, robo de datos o accesos no autorizados por parte de empleados.
+        </p>
+        <p>
+          <strong>Particulares</strong> afectados por acoso online, estafas o suplantación de identidad que necesitan prueba válida para denunciar.
+        </p>
+        <p class="small">
+          Cobertura en toda España. Primera consulta gratuita para evaluar viabilidad del caso.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<div class="proceso-bg" id="proceso">
+  <div class="proceso-inner">
+    <div class="eyebrow">Cómo trabajo</div>
+    <h2>Simple, transparente, accionable.</h2>
+    <div class="proceso-steps">
+      <div class="paso">
+        <div class="paso-num">1</div>
+        <h4>Consulta gratuita</h4>
+        <p>Cuéntame tu situación por email o videollamada. Evalúo viabilidad sin coste.</p>
+      </div>
+      <div class="paso">
+        <div class="paso-num">2</div>
+        <h4>Presupuesto cerrado</h4>
+        <p>Recibes propuesta con precio fijo, alcance y plazo. Sin sorpresas después.</p>
+      </div>
+      <div class="paso">
+        <div class="paso-num">3</div>
+        <h4>Análisis técnico</h4>
+        <p>Trabajo manual con herramientas profesionales y metodología reconocida.</p>
+      </div>
+      <div class="paso">
+        <div class="paso-num">4</div>
+        <h4>Informe + soporte</h4>
+        <p>Entrega en 48–72h. Versión técnica y ejecutiva. Soporte post-informe incluido.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SOBRE MI -->
+<section class="section" id="sobre-mi">
+  <div class="sobre-grid">
+    <div class="sobre-text">
+      <div class="eyebrow">Sobre mí</div>
+      <h2>Nieves Casquero</h2>
+      <p>
+        Especialista en ciberseguridad ofensiva y peritaje informático con base en La Línea de la Concepción, disponible en remoto para toda España. Más de 4 años de experiencia en IT y seguridad.
+      </p>
+      <p>
+        Cazadora de bugs activa en HackerOne, Bugcrowd y YesWeHack con hallazgos reales en programas internacionales. Esto me permite ver los sistemas como lo hace un atacante real, no solo como lo haría una herramienta automática.
+      </p>
+      <p>
+        Organizadora de CiberEstrechoCON 2025. En formación avanzada en peritaje judicial informático con orientación al CPITIA.
+      </p>
+      <div class="cert-row">
+        <span class="cert">CompTIA A+</span>
+        <span class="cert">CompTIA PenTest+</span>
+        <span class="cert">Máster Ciberseguridad & Hacking Ético</span>
+        <span class="cert">CiberEstrechoCON 2025</span>
+        <span class="cert">ISO 27037</span>
+        <span class="cert">OWASP Top 10</span>
+      </div>
+    </div>
+
+    <div class="platforms-panel">
+      <h4>Actividad verificable</h4>
+      <div class="prow">
+        <span class="prow-name">HackerOne</span>
+        <span class="prow-handle">@AnkbNikas</span>
+        <span class="prow-badge">Activa</span>
+      </div>
+      <div class="prow">
+        <span class="prow-name">Bugcrowd</span>
+        <span class="prow-handle">@AnkbNikas</span>
+        <span class="prow-badge">Activa</span>
+      </div>
+      <div class="prow">
+        <span class="prow-name">YesWeHack</span>
+        <span class="prow-handle">@AnkbNikas</span>
+        <span class="prow-badge">Activa</span>
+      </div>
+      <div class="prow">
+        <span class="prow-name">LinkedIn</span>
+        <span class="prow-handle">Nieves Casquero</span>
+        <span class="prow-badge">804 seguidores</span>
+      </div>
+      <div class="prow" style="border-bottom:none;padding-bottom:0;">
+        <span class="prow-name" style="color:var(--muted);font-size:0.82rem;">Cobertura</span>
+        <span style="font-size:0.82rem;color:var(--muted);">Toda España · Remoto</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<div class="contacto-bg" id="contacto">
+  <div class="contacto-inner">
+    <div class="disponible">Disponible para nuevos proyectos</div>
+    <div class="eyebrow" style="text-align:center;">Contacto</div>
+    <h2>¿Tienes una web, una empresa<br>o un caso judicial?</h2>
+    <p class="section-lead">Primera consulta gratuita por videollamada o email. Sin compromiso. Cuéntame tu situación y te digo exactamente qué puedo hacer y cuánto costaría.</p>
+    <a href="mailto:nieveskaskero@hotmail.com" class="btn-primary" style="font-size:0.95rem;padding:0.9rem 2.2rem;">Escribir ahora →</a>
+    <div class="contacto-links">
+      <a href="https://www.linkedin.com/in/nieves-kaskero" class="contacto-link" target="_blank">↗ LinkedIn</a>
+      <a href="https://hackerone.com/AnkbNikas" class="contacto-link" target="_blank">↗ HackerOne</a>
+      <a href="https://bugcrowd.com/AnkbNikas" class="contacto-link" target="_blank">↗ Bugcrowd</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Nieves Casquero · Ciberseguridad & Peritaje Informático · España
+</footer>
+
+</body>
+</html>
