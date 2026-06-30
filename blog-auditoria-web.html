@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>¿Cuándo necesita tu empresa una auditoría de seguridad web? · Nieves Casquero</title>
+<meta name="description" content="Las señales de que tu web tiene vulnerabilidades que no conoces, qué busca una auditoría y cuánto cuesta no hacerla. Guía práctica para empresas." />
+<link rel="canonical" href="https://nievescasquero.github.io/blog-auditoria-web.html" />
+<meta property="og:title" content="¿Cuándo necesita tu empresa una auditoría de seguridad web?" />
+<meta property="og:description" content="Las señales de que tu web tiene vulnerabilidades que no conoces y qué hacer al respecto. Guía práctica para pymes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nievescasquero.github.io/blog-auditoria-web.html" />
+<link rel="stylesheet" href="style.css" />
+<style>
+  .article-wrap { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+  .article-wrap .eyebrow { margin-bottom: 18px; }
+  .article-wrap h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.15; margin-bottom: 18px; }
+  .article-meta { font-size: 14px; color: var(--grey-2); margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--line); display: flex; gap: 20px; flex-wrap: wrap; }
+  .article-body p { font-size: 16.5px; color: #374151; line-height: 1.78; margin-bottom: 22px; }
+  .article-body h2 { font-size: 22px; margin: 44px 0 14px; color: var(--navy); }
+  .article-body ul { padding-left: 0; list-style: none; margin-bottom: 22px; display: grid; gap: 12px; }
+  .article-body ul li { font-size: 16px; color: #374151; padding-left: 22px; position: relative; line-height: 1.65; }
+  .article-body ul li::before { content: "—"; color: var(--red); position: absolute; left: 0; font-weight: 700; }
+  .article-body strong { color: var(--navy); }
+  .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+  .comp-card { border: 1px solid var(--line); padding: 22px; border-radius: 2px; }
+  .comp-card.featured { border-color: var(--navy); }
+  .comp-card .comp-title { font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .comp-card .comp-price { font-size: 22px; font-weight: 700; color: var(--red); margin-bottom: 10px; }
+  .comp-card p { font-size: 14px; color: var(--grey); margin: 0; }
+  .stat-box { background: var(--navy); color: #fff; padding: 28px 32px; border-radius: 2px; margin: 32px 0; display: flex; gap: 24px; align-items: center; }
+  .stat-box .stat-num { font-family: 'Source Serif 4', Georgia, serif; font-size: 42px; font-weight: 700; color: #fff; white-space: nowrap; }
+  .stat-box p { color: #cdd9e6; font-size: 15px; margin: 0; }
+  .article-cta { background: var(--navy); color: #fff; padding: 32px 36px; border-radius: 2px; margin-top: 56px; }
+  .article-cta h3 { color: #fff; font-size: 20px; margin-bottom: 10px; }
+  .article-cta p { color: #cdd9e6; font-size: 15px; margin-bottom: 20px; }
+  .article-cta a { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: #fff; padding: 13px 24px; font-weight: 600; font-size: 15px; border-radius: 2px; transition: background .15s; }
+  .article-cta a:hover { background: var(--red-2); }
+  .related { padding: 64px 0; background: var(--paper-2); border-top: 1px solid var(--line); }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 32px; }
+  .related-card { background: #fff; border: 1px solid var(--line); padding: 24px; border-radius: 2px; transition: transform .2s; }
+  .related-card:hover { transform: translateY(-2px); }
+  .related-card .tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--red); margin-bottom: 10px; display: block; }
+  .related-card h4 { font-size: 16px; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+  .related-card p { font-size: 13.5px; color: var(--grey); margin-bottom: 14px; }
+  .related-card a { font-size: 13.5px; font-weight: 600; color: var(--red); }
+  @media (max-width: 600px) { .comparison, .related-grid { grid-template-columns: 1fr; } .stat-box { flex-direction: column; gap: 12px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">Nieves <span>Casquero</span></a>
+      <div class="navlinks">
+        <a href="servicios.html">Servicios</a>
+        <a href="index.html#peritaje">Para despachos</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="index.html#contacto" class="btn btn-primary nav-cta">Consulta gratuita</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Inicio</a> / <a href="index.html#blog">Blog</a> / Seguridad web</div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="article-wrap">
+    <span class="eyebrow">Seguridad Web · Empresas</span>
+    <h1>¿Cuándo necesita tu empresa una auditoría de seguridad web?</h1>
+    <div class="article-meta">
+      <span>✍️ Ana Nieves Casquero Benítez</span>
+      <span>📍 Auditora de Seguridad · La Línea de la Concepción</span>
+      <span>🌐 nievescasquero.github.io</span>
+    </div>
+
+    <div class="article-body">
+
+      <p>Muchas empresas creen que la ciberseguridad es un problema de las grandes corporaciones. La realidad es exactamente la opuesta: las pymes son el objetivo preferido de los atacantes precisamente porque tienen menos protección y menos recursos para responder cuando algo sale mal.</p>
+
+      <p>Si tu empresa tiene una web, una tienda online, un portal de clientes o cualquier aplicación accesible desde internet, tienes superficie de ataque. La pregunta no es si deberías hacer una auditoría, sino cuándo.</p>
+
+      <h2>Las señales de que necesitas una auditoría ya</h2>
+
+      <ul>
+        <li><strong>Vas a lanzar una web nueva o a rediseñar la actual.</strong> Es el mejor momento — antes de que esté en producción con datos reales de clientes. Corregir una vulnerabilidad en fase de desarrollo cuesta una fracción de lo que cuesta hacerlo después de un incidente.</li>
+        <li><strong>Manejas datos personales de clientes.</strong> El RGPD obliga a adoptar medidas técnicas adecuadas. Una auditoría es la forma de demostrar que lo haces — y de evitar las sanciones de la AEPD, que pueden llegar a 20 millones de euros.</li>
+        <li><strong>Nunca has hecho una auditoría.</strong> Si tu web lleva años en producción sin revisión, hay una probabilidad alta de que tenga vulnerabilidades conocidas. Los atacantes automáticos las detectan continuamente.</li>
+        <li><strong>Has tenido un incidente.</strong> Si alguien accedió donde no debía, o tu web mostró contenido que no pusiste tú, necesitas saber qué pasó y tapar el agujero real, no solo los síntomas visibles.</li>
+        <li><strong>Un cliente o proveedor te lo exige.</strong> Cada vez más contratos B2B y licitaciones públicas incluyen requisitos de seguridad que hay que demostrar por escrito.</li>
+        <li><strong>Tu competencia ha sufrido un ataque.</strong> Si una empresa similar a la tuya ha sido comprometida, probablemente comparten las mismas tecnologías y vulnerabilidades.</li>
+      </ul>
+
+      <h2>Qué vulnerabilidades busca una auditoría</h2>
+
+      <p>Una auditoría de seguridad web analiza tu aplicación contra el estándar OWASP Top 10, que recopila las diez categorías de vulnerabilidades más críticas y frecuentes. Las más habituales en webs de pymes:</p>
+
+      <ul>
+        <li><strong>Inyección SQL:</strong> un atacante puede extraer toda la base de datos de clientes a través de un formulario mal protegido. Es una de las vulnerabilidades más antiguas y sigue siendo devastadoramente común.</li>
+        <li><strong>Cross-Site Scripting (XSS):</strong> código malicioso que se ejecuta en el navegador de tus clientes cuando visitan tu web, pudiendo robar sus sesiones o datos.</li>
+        <li><strong>Control de acceso roto:</strong> un usuario normal puede acceder a datos de otro usuario o a funcionalidades de administrador cambiando un número en la URL.</li>
+        <li><strong>Configuración incorrecta del servidor:</strong> paneles de administración accesibles sin autenticación, archivos de configuración expuestos, versiones desactualizadas de software con vulnerabilidades conocidas.</li>
+        <li><strong>Autenticación débil:</strong> contraseñas sin limitación de intentos, tokens de sesión predecibles, ausencia de 2FA en el panel de administración.</li>
+      </ul>
+
+      <h2>La diferencia entre un escáner automático y una auditoría real</h2>
+
+      <p>Muchas empresas confunden un escáner de vulnerabilidades (una herramienta automática que comprueba una lista de comprobaciones conocidas) con una auditoría de seguridad. No son lo mismo.</p>
+
+      <p>Los escáneres automáticos detectan vulnerabilidades conocidas y genéricas. Una auditoría manual va más allá: analiza la lógica de negocio específica de tu aplicación, busca vulnerabilidades que ningún escáner conoce porque son específicas de tu implementación, y verifica el impacto real de cada hallazgo.</p>
+
+      <p>En mi caso, aplico la misma mentalidad que uso en bug bounty en programas internacionales: busco lo que un atacante real buscaría en tu sistema, no lo que una herramienta automática sabe buscar.</p>
+
+      <h2>Auditoría básica vs. Deep Assessment: ¿cuál necesito?</h2>
+
+      <div class="comparison">
+        <div class="comp-card">
+          <div class="comp-title">Auditoría de seguridad web</div>
+          <div class="comp-price">500€–1.500€</div>
+          <p>Identifica vulnerabilidades OWASP Top 10, las documenta con evidencias y las clasifica por severidad. Incluye informe técnico y ejecutivo. Entrega en 48–72h. Ideal para pymes y como primer análisis.</p>
+        </div>
+        <div class="comp-card featured">
+          <div class="comp-title">Deep Security Assessment</div>
+          <div class="comp-price">1.500€–4.000€</div>
+          <p>Va más allá: explota vulnerabilidades de forma controlada para demostrar impacto real, cubre APIs y autenticación en profundidad, incluye llamada de 30 min con dirección y roadmap de corrección priorizado.</p>
+        </div>
+      </div>
+
+      <h2>¿Cuánto cuesta NO hacer una auditoría?</h2>
+
+      <div class="stat-box">
+        <div class="stat-num">+42.000€</div>
+        <p>Coste medio estimado de recuperarse de un incidente de seguridad en una pyme, sumando tiempo de inactividad, recuperación técnica, posibles sanciones de la AEPD y daño reputacional.</p>
+      </div>
+
+      <p>Una auditoría preventiva de 1.000€ es una de las mejores inversiones que puede hacer una empresa con presencia digital. No porque garantice la invulnerabilidad (ninguna auditoría puede hacerlo), sino porque reduce drásticamente la superficie de ataque y demuestra diligencia debida si alguna vez tienes que justificar tus medidas de seguridad.</p>
+
+      <h2>¿Qué pasa después de la auditoría?</h2>
+
+      <p>La auditoría entrega un informe con todos los hallazgos, su severidad y recomendaciones concretas de corrección. Tu equipo de desarrollo (o tu agencia web) implementa los cambios. A los 30–60 días puedes contratar un retest: una verificación de que las correcciones se implementaron bien y no introdujeron nuevas vulnerabilidades.</p>
+
+      <p>Para empresas que quieren mantener ese nivel de seguridad de forma continua, existe la opción de monitorización mensual: una revisión periódica de la superficie expuesta, con alerta inmediata si aparece algo nuevo. Desde 80€/mes, sin permanencia.</p>
+
+      <div class="article-cta">
+        <h3>Solicita tu presupuesto sin compromiso</h3>
+        <p>Cuéntame qué tecnología usa tu web y cuántas funcionalidades tiene. En 24h te envío un presupuesto cerrado.</p>
+        <a href="mailto:nieveskaskero@hotmail.com">Solicitar presupuesto →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="related">
+  <div class="container">
+    <span class="eyebrow">Seguir leyendo</span>
+    <div class="related-grid">
+      <div class="related-card">
+        <span class="tag">Peritaje</span>
+        <h4>¿Qué es un perito informático y cuándo necesitas uno?</h4>
+        <p>Para despachos de abogados: cuándo la evidencia digital necesita un dictamen técnico sólido.</p>
+        <a href="blog-perito-informatico.html">Leer artículo →</a>
+      </div>
+      <div class="related-card">
+        <span class="tag">Peritaje · Despachos</span>
+        <h4>Evidencia digital en juicio: por qué un WhatsApp no siempre es prueba</h4>
+        <p>Por qué una captura de pantalla puede no valer nada ante un tribunal y qué sí funciona.</p>
+        <a href="blog-evidencia-digital.html">Leer artículo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="contact-inner">
+      <span class="eyebrow" style="color:#f0a8a8;">Contacto</span>
+      <h2>¿Cuándo fue la última vez que alguien revisó tu web?</h2>
+      <p>Primera consulta gratuita. Presupuesto cerrado en 24h.</p>
+      <div class="contact-ctas">
+        <a href="mailto:nieveskaskero@hotmail.com" class="btn btn-primary">Solicitar auditoría →</a>
+        <a href="servicios.html" class="btn btn-ghost-light">Ver todos los servicios →</a>
+      </div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/nieves-kaskero" target="_blank" rel="noopener">↗ LinkedIn</a>
+        <a href="https://hackerone.com/AnkbNikas" target="_blank" rel="noopener">↗ HackerOne</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="index.html#contacto">Contacto</a>
+    </div>
+    © 2026 Nieves Casquero · Ciberseguridad para empresas y despachos · España
+  </div>
+</footer>
+
+</body>
+</html>
