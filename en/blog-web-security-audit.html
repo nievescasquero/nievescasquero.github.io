@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>When Does Your Business Need a Web Security Audit? · Nieves Casquero</title>
+<meta name="description" content="The warning signs that your website has vulnerabilities you don't know about, what an audit looks for, and what it costs not to do one. A practical guide for businesses." />
+<link rel="canonical" href="https://nievescasquero.github.io/en/blog-web-security-audit.html" />
+<meta property="og:title" content="When Does Your Business Need a Web Security Audit?" />
+<meta property="og:description" content="The warning signs that your website has vulnerabilities you don't know about — and what to do about it. A practical guide for SMEs." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nievescasquero.github.io/en/blog-web-security-audit.html" />
+<link rel="stylesheet" href="../style.css?v=2" />
+<style>
+  .article-wrap { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+  .article-wrap .eyebrow { margin-bottom: 18px; }
+  .article-wrap h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.15; margin-bottom: 18px; }
+  .article-meta { font-size: 14px; color: var(--grey-2); margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--line); display: flex; gap: 20px; flex-wrap: wrap; }
+  .article-body p { font-size: 16.5px; color: #374151; line-height: 1.78; margin-bottom: 22px; }
+  .article-body h2 { font-size: 22px; margin: 44px 0 14px; color: var(--navy); }
+  .article-body ul { padding-left: 0; list-style: none; margin-bottom: 22px; display: grid; gap: 12px; }
+  .article-body ul li { font-size: 16px; color: #374151; padding-left: 22px; position: relative; line-height: 1.65; }
+  .article-body ul li::before { content: "—"; color: var(--red); position: absolute; left: 0; font-weight: 700; }
+  .article-body strong { color: var(--navy); }
+  .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+  .comp-card { border: 1px solid var(--line); padding: 22px; border-radius: 2px; }
+  .comp-card.featured { border-color: var(--navy); }
+  .comp-card .comp-title { font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .comp-card .comp-price { font-size: 22px; font-weight: 700; color: var(--red); margin-bottom: 10px; }
+  .comp-card p { font-size: 14px; color: var(--grey); margin: 0; }
+  .stat-box { background: var(--navy); color: #fff; padding: 28px 32px; border-radius: 2px; margin: 32px 0; display: flex; gap: 24px; align-items: center; }
+  .stat-box .stat-num { font-family: 'Source Serif 4', Georgia, serif; font-size: 42px; font-weight: 700; color: #fff; white-space: nowrap; }
+  .stat-box p { color: #cdd9e6; font-size: 15px; margin: 0; }
+  .article-cta { background: var(--navy); color: #fff; padding: 32px 36px; border-radius: 2px; margin-top: 56px; }
+  .article-cta h3 { color: #fff; font-size: 20px; margin-bottom: 10px; }
+  .article-cta p { color: #cdd9e6; font-size: 15px; margin-bottom: 20px; }
+  .article-cta a { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: #fff; padding: 13px 24px; font-weight: 600; font-size: 15px; border-radius: 2px; transition: background .15s; }
+  .article-cta a:hover { background: var(--red-2); }
+  .related { padding: 64px 0; background: var(--paper-2); border-top: 1px solid var(--line); }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 32px; }
+  .related-card { background: #fff; border: 1px solid var(--line); padding: 24px; border-radius: 2px; transition: transform .2s; }
+  .related-card:hover { transform: translateY(-2px); }
+  .related-card .tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--red); margin-bottom: 10px; display: block; }
+  .related-card h4 { font-size: 16px; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+  .related-card p { font-size: 13.5px; color: var(--grey); margin-bottom: 14px; }
+  .related-card a { font-size: 13.5px; font-weight: 600; color: var(--red); }
+  @media (max-width: 600px) { .comparison, .related-grid { grid-template-columns: 1fr; } .stat-box { flex-direction: column; gap: 12px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">Nieves <span>Casquero</span></a>
+      <div class="navlinks">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact" class="btn btn-primary nav-cta">Free consultation</a>
+        <span class="lang-switch"><a href="../blog-auditoria-web.html">ES</a><span class="sep">/</span><a href="#" class="active">EN</a></span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#blog">Blog</a> / Web Security</div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="article-wrap">
+    <span class="eyebrow">Web Security · Business</span>
+    <h1>When Does Your Business Need a Web Security Audit?</h1>
+    <div class="article-meta">
+      <span>✍️ Ana Nieves Casquero Benítez</span>
+      <span>📍 Security Auditor · La Línea de la Concepción</span>
+      <span>🌐 nievescasquero.github.io</span>
+    </div>
+
+    <div class="article-body">
+
+      <p>Many businesses believe cybersecurity is a big-corporation problem. The reality is exactly the opposite: SMEs are attackers' preferred target precisely because they have less protection and fewer resources to respond when something goes wrong.</p>
+
+      <p>If your business has a website, an online store, a customer portal, or any application accessible from the internet, you have an attack surface. The question isn't whether you should get an audit, but when.</p>
+
+      <h2>Signs you need an audit now</h2>
+
+      <ul>
+        <li><strong>You're launching a new site or redesigning your current one.</strong> This is the best time — before it's in production with real customer data. Fixing a vulnerability during development costs a fraction of what it costs after an incident.</li>
+        <li><strong>You handle customers' personal data.</strong> GDPR requires adopting adequate technical measures. An audit is how you demonstrate that you do — and how you avoid regulatory fines, which can reach €20 million.</li>
+        <li><strong>You've never had an audit.</strong> If your website has been live for years without review, there's a high chance it has known vulnerabilities. Automated attackers scan for them continuously.</li>
+        <li><strong>You've had an incident.</strong> If someone accessed something they shouldn't have, or your site displayed content you didn't put there, you need to know what happened and patch the real hole, not just the visible symptoms.</li>
+        <li><strong>A client or vendor requires it.</strong> More and more B2B contracts and public tenders include security requirements that must be demonstrated in writing.</li>
+        <li><strong>A competitor has been attacked.</strong> If a similar company to yours was compromised, you likely share the same technologies and vulnerabilities.</li>
+      </ul>
+
+      <h2>What vulnerabilities an audit looks for</h2>
+
+      <p>A web security audit tests your application against the OWASP Top 10 standard, which compiles the ten most critical and common vulnerability categories. The most common ones in SME websites:</p>
+
+      <ul>
+        <li><strong>SQL Injection:</strong> an attacker can extract your entire customer database through a poorly protected form. It's one of the oldest vulnerabilities and remains devastatingly common.</li>
+        <li><strong>Cross-Site Scripting (XSS):</strong> malicious code that runs in your customers' browsers when they visit your site, potentially stealing their sessions or data.</li>
+        <li><strong>Broken access control:</strong> a regular user can access another user's data or admin functionality by changing a number in the URL.</li>
+        <li><strong>Server misconfiguration:</strong> admin panels accessible without authentication, exposed configuration files, outdated software versions with known vulnerabilities.</li>
+        <li><strong>Weak authentication:</strong> passwords with no rate limiting, predictable session tokens, no 2FA on the admin panel.</li>
+      </ul>
+
+      <h2>The difference between an automated scanner and a real audit</h2>
+
+      <p>Many businesses confuse a vulnerability scanner (an automated tool that checks a list of known items) with a security audit. They're not the same.</p>
+
+      <p>Automated scanners detect known, generic vulnerabilities. A manual audit goes further: it analyzes your application's specific business logic, looks for vulnerabilities no scanner knows about because they're specific to your implementation, and verifies the real impact of each finding.</p>
+
+      <p>In my case, I apply the same mindset I use in bug bounty programs at international companies: I look for what a real attacker would look for in your system, not what an automated tool knows how to look for.</p>
+
+      <h2>Basic Audit vs. Deep Assessment: which do I need?</h2>
+
+      <div class="comparison">
+        <div class="comp-card">
+          <div class="comp-title">Web Security Audit</div>
+          <div class="comp-price">€450–€1,400</div>
+          <p>Identifies OWASP Top 10 vulnerabilities, documents them with evidence and classifies them by severity. Includes a technical and executive report. Delivered in 48–72h. Ideal for SMEs and as a first-pass analysis.</p>
+        </div>
+        <div class="comp-card featured">
+          <div class="comp-title">Deep Security Assessment</div>
+          <div class="comp-price">€1,400–€3,800</div>
+          <p>Goes further: exploits vulnerabilities in a controlled way to demonstrate real impact, covers APIs and authentication in depth, includes a 30-min call with management and a prioritized remediation roadmap.</p>
+        </div>
+      </div>
+
+      <h2>What does it cost NOT to get an audit?</h2>
+
+      <div class="stat-box">
+        <div class="stat-num">€100,000+</div>
+        <p>Estimated average cost of recovering from a security incident at an SME, factoring in downtime, technical recovery, possible regulatory fines and reputational damage.</p>
+      </div>
+
+      <p>A preventive audit for around €1,000 is one of the best investments a business with a digital presence can make. Not because it guarantees invulnerability (no audit can), but because it drastically reduces your attack surface and demonstrates due diligence if you ever need to justify your security measures.</p>
+
+      <h2>What happens after the audit?</h2>
+
+      <p>The audit delivers a report with every finding, its severity, and concrete remediation recommendations. Your development team (or web agency) implements the changes. After 30–60 days, you can hire a retest: a verification that fixes were implemented correctly and didn't introduce new vulnerabilities.</p>
+
+      <p>For businesses that want to maintain that security level continuously, there's a monthly monitoring option: a periodic review of your exposed surface, with immediate alerts if something new appears. Starting at €70/month, no lock-in.</p>
+
+      <div class="article-cta">
+        <h3>Request your no-obligation quote</h3>
+        <p>Tell me what technology your website uses and how many features it has. I'll send you a fixed quote within 24h.</p>
+        <a href="mailto:nieveskaskero@hotmail.com">Request quote →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="related">
+  <div class="container">
+    <span class="eyebrow">Keep reading</span>
+    <div class="related-grid">
+      <div class="related-card">
+        <span class="tag">Incident Response</span>
+        <h4>What to do in the first hours after a security incident</h4>
+        <p>The steps that make the difference between containing an incident and letting it become a crisis.</p>
+        <a href="blog-incident-response.html">Read article →</a>
+      </div>
+      <div class="related-card">
+        <span class="tag">Digital Forensics</span>
+        <h4>Why you should preserve digital evidence after an incident</h4>
+        <p>The logs, screenshots and access records that disappear in the first hours — and why acting fast changes everything.</p>
+        <a href="blog-digital-evidence.html">Read article →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <span class="eyebrow" style="color:#f0a8a8;">Contact</span>
+      <h2>When was the last time someone reviewed your website?</h2>
+      <p>First consultation free. Fixed quote within 24h.</p>
+      <div class="contact-ctas">
+        <a href="mailto:nieveskaskero@hotmail.com" class="btn btn-primary">Request audit →</a>
+        <a href="services.html" class="btn btn-ghost-light">View all services →</a>
+      </div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/nieves-kaskero" target="_blank" rel="noopener">↗ LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    © 2026 Nieves Casquero · Cybersecurity for businesses · Spain
+  </div>
+</footer>
+
+</body>
+</html>

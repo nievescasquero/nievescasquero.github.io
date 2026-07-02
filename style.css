@@ -64,6 +64,11 @@ nav{display:flex; align-items:center; justify-content:space-between; padding:18p
 .navlinks a.active{border-bottom:2px solid var(--red); padding-bottom:4px;}
 .nav-cta{padding:10px 20px; font-size:14px;}
 .navlinks a.nav-cta{color:#fff;}
+.lang-switch{display:flex; align-items:center; gap:4px; font-size:12.5px; font-weight:700; letter-spacing:.02em;}
+.lang-switch a{padding:4px 7px; border-radius:3px; color:var(--grey-2); transition:all .15s;}
+.lang-switch a.active{background:var(--navy); color:#fff;}
+.lang-switch a:not(.active):hover{background:var(--paper-2); color:var(--navy);}
+.lang-switch .sep{color:var(--line);}
 
 /* ---------- PAGE HERO (subpages) ---------- */
 .page-hero{
@@ -232,6 +237,8 @@ footer .footer-links a{color:#9fb0c2;} footer .footer-links a:hover{color:#fff;}
 
 @media (max-width: 900px){
   .navlinks a:not(.nav-cta){display:none;}
+  .navlinks .lang-switch{display:flex;}
+  .navlinks .lang-switch a{display:inline-flex;}
   .navlinks{gap:0;}
   .hero-stats{grid-template-columns:repeat(2,1fr); row-gap:24px;}
   .hero-stats div{border-right:none; padding-right:0;}
