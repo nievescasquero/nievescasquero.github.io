@@ -63,6 +63,7 @@ nav{display:flex; align-items:center; justify-content:space-between; padding:18p
 .navlinks a:hover, .navlinks a.active{color:var(--navy);}
 .navlinks a.active{border-bottom:2px solid var(--red); padding-bottom:4px;}
 .nav-cta{padding:10px 20px; font-size:14px;}
+.navlinks a.nav-cta{color:#fff;}
 
 /* ---------- PAGE HERO (subpages) ---------- */
 .page-hero{
