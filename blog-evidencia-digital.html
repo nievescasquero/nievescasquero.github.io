@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Evidencia digital en juicio: por qué un WhatsApp no siempre es prueba · Nieves Casquero</title>
-<meta name="description" content="Por qué una captura de pantalla de WhatsApp puede ser impugnada en juicio y qué metodología forense sí garantiza la validez de la prueba digital ante un tribunal." />
+<title>Por qué preservar la evidencia digital tras un incidente · Nieves Casquero</title>
+<meta name="description" content="Los logs, capturas y accesos que desaparecen en las primeras horas tras un incidente de seguridad — y por qué preservarlos correctamente marca la diferencia." />
 <link rel="canonical" href="https://nievescasquero.github.io/blog-evidencia-digital.html" />
-<meta property="og:title" content="Evidencia digital en juicio: por qué un WhatsApp no siempre es prueba" />
-<meta property="og:description" content="Una captura de pantalla puede ser impugnada. Descubre qué garantías técnicas necesita la prueba digital para resistir ante un tribunal." />
+<meta property="og:title" content="Por qué preservar la evidencia digital tras un incidente" />
+<meta property="og:description" content="Qué evidencia digital desaparece más rápido tras un incidente de seguridad y cómo preservarla correctamente." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nievescasquero.github.io/blog-evidencia-digital.html" />
 <link rel="stylesheet" href="style.css" />
@@ -59,7 +59,6 @@
       <a href="index.html" class="logo">Nieves <span>Casquero</span></a>
       <div class="navlinks">
         <a href="servicios.html">Servicios</a>
-        <a href="index.html#peritaje">Para despachos</a>
         <a href="sobre-mi.html">Sobre mí</a>
         <a href="index.html#contacto" class="btn btn-primary nav-cta">Consulta gratuita</a>
       </div>
@@ -70,119 +69,112 @@
 <section class="page-hero">
   <div class="container">
     <div class="page-hero-inner">
-      <div class="breadcrumb"><a href="index.html">Inicio</a> / <a href="index.html#blog">Blog</a> / Peritaje · Despachos</div>
+      <div class="breadcrumb"><a href="index.html">Inicio</a> / <a href="index.html#blog">Blog</a> / Forense Digital</div>
     </div>
   </div>
 </section>
 
 <div class="container">
   <div class="article-wrap">
-    <span class="eyebrow">Peritaje · Despachos de Abogados</span>
-    <h1>Evidencia digital en juicio: por qué un WhatsApp no siempre es prueba</h1>
+    <span class="eyebrow">Forense Digital</span>
+    <h1>Por qué preservar la evidencia digital tras un incidente</h1>
     <div class="article-meta">
       <span>✍️ Ana Nieves Casquero Benítez</span>
-      <span>📍 Perito Judicial Informático · La Línea de la Concepción</span>
+      <span>📍 Ciberseguridad Ofensiva · La Línea de la Concepción</span>
       <span>🌐 nievescasquero.github.io</span>
     </div>
 
     <div class="article-body">
 
-      <p>Cada semana algún abogado llega a juicio con capturas de pantalla de WhatsApp como prueba principal de su caso. Y cada semana la parte contraria las impugna. A veces el tribunal las admite. Otras veces no.</p>
+      <p>Cuando una empresa detecta un incidente de seguridad, la reacción natural es querer arreglarlo cuanto antes: reiniciar el servidor, cambiar la contraseña, cerrar el agujero. El problema es que esa misma prisa suele destruir la evidencia que explicaría qué pasó realmente.</p>
 
-      <p>El problema no es el WhatsApp. El problema es cómo se documenta.</p>
+      <p>Y sin esa evidencia, es imposible saber si el atacante sigue dentro, qué se llevó, o si el mismo fallo va a volver a explotarse la semana que viene.</p>
 
       <div class="warning-box">
-        <strong>Lo que muchos despachos no saben hasta que es demasiado tarde</strong>
-        <p>Una imagen de la pantalla de un móvil puede manipularse en segundos con cualquier aplicación de edición. Sin un análisis técnico que verifique su autenticidad, la contraparte puede impugnarla y el juez puede darle poco o ningún valor — aunque el contenido sea completamente real.</p>
+        <strong>Lo que la mayoría de empresas no saben hasta que es demasiado tarde</strong>
+        <p>Los logs de un servidor suelen rotar y sobrescribirse en horas o días. La memoria RAM se pierde al apagar el equipo. Un simple reinicio puede borrar exactamente el rastro que hacía falta para entender el ataque.</p>
       </div>
 
-      <h2>¿Por qué una captura de pantalla no es suficiente?</h2>
+      <h2>Qué evidencia desaparece más rápido</h2>
 
-      <p>No hay ningún elemento técnico en una captura de pantalla que permita verificar que el contenido es auténtico, que no ha sido editado, o que corresponde realmente a la conversación que dice ser.</p>
+      <p>No toda la evidencia digital tiene la misma "vida útil". Algunas fuentes se pierden en minutos, otras aguantan semanas. Saber esto ayuda a priorizar qué preservar primero:</p>
 
-      <p>Los tribunales españoles son cada vez más conscientes de esto. El Tribunal Supremo ha establecido en diversas resoluciones que la prueba digital debe ir acompañada de garantías técnicas suficientes para ser valorada con plena eficacia probatoria. La Sala de lo Penal ha precisado que la impugnación de una prueba digital obliga a la parte que la aporta a acreditar su autenticidad por cualquier medio válido en derecho — y el dictamen pericial es el más sólido de todos.</p>
+      <ul>
+        <li><strong>Memoria RAM y procesos en ejecución.</strong> Desaparecen al apagar el equipo — y ahí suele estar la evidencia de malware activo o conexiones del atacante.</li>
+        <li><strong>Logs de firewall y acceso.</strong> Muchos sistemas rotan estos registros automáticamente cada pocos días.</li>
+        <li><strong>Sesiones y tokens activos.</strong> Cambian constantemente; sin capturarlos a tiempo, se pierde el rastro de qué cuentas estuvieron comprometidas.</li>
+        <li><strong>Metadatos de archivos.</strong> Se pueden alterar sin querer con una simple copia mal hecha si no se usa una herramienta forense adecuada.</li>
+      </ul>
 
-      <h2>Qué sí funciona: la metodología forense</h2>
+      <h2>Cómo se preserva evidencia correctamente</h2>
 
-      <p>Cuando un perito informático analiza una evidencia digital, el proceso es radicalmente diferente. Se trabaja sobre el archivo original — la base de datos de WhatsApp, el servidor de correo, los metadatos del archivo — y cada paso queda documentado de forma que cualquier otro experto puede repetirlo y obtener el mismo resultado.</p>
+      <p>Cuando se hace un análisis forense serio, el proceso sigue una metodología pensada para que la evidencia se mantenga íntegra y verificable en cada paso — no solo para el informe interno, sino por si en algún momento hace falta demostrar exactamente qué pasó.</p>
 
       <div class="process-steps">
         <div class="step-item">
           <div class="step-num">1</div>
           <div>
-            <h4>Recepción y cadena de custodia</h4>
-            <p>Se documenta el estado del dispositivo o archivo en el momento de recibirlo: fecha, hora, condición física, y se calcula el hash SHA-256 del archivo original.</p>
+            <h4>Aislamiento y registro inicial</h4>
+            <p>Se documenta el estado del sistema en el momento de la detección: fecha, hora y condición, sin apagar ni modificar nada todavía.</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">2</div>
           <div>
             <h4>Adquisición forense</h4>
-            <p>Se crea una copia exacta bit a bit del dispositivo o archivo, con verificación criptográfica de que la copia es idéntica al original. Se trabaja siempre sobre la copia, nunca sobre el original.</p>
+            <p>Se crea una copia exacta bit a bit de disco y, si es posible, de memoria RAM, con verificación criptográfica (hash) de que la copia es idéntica al original.</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">3</div>
           <div>
             <h4>Análisis técnico</h4>
-            <p>Extracción y análisis de los datos con herramientas forenses reconocidas (Autopsy, UFADE para iOS, etc.). Los timestamps, metadatos y estructuras de base de datos son difícilmente manipulables sin dejar rastro.</p>
+            <p>Extracción y análisis con herramientas forenses reconocidas (Volatility para memoria, Autopsy para disco). Los timestamps y metadatos son difíciles de manipular sin dejar rastro.</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">4</div>
           <div>
-            <h4>Dictamen con conclusiones numeradas</h4>
-            <p>Informe estructurado con metodología, hallazgos y conclusiones que responden exactamente a las preguntas del encargo pericial, listo para presentar en sala.</p>
+            <h4>Informe con línea de tiempo</h4>
+            <p>Reconstrucción de qué pasó, en qué orden y con qué alcance, con conclusiones claras y accionables para cerrar el incidente.</p>
           </div>
         </div>
       </div>
 
-      <h2>Los casos más habituales en despachos</h2>
+      <h2>Situaciones donde esto importa especialmente</h2>
 
       <div class="cases-grid">
         <div class="case-card">
-          <span class="area">Derecho de Familia</span>
-          <h4>Divorcio y custodia</h4>
-          <p>Conversaciones de WhatsApp que acreditan acuerdos, incumplimientos o conductas relevantes para la guarda y custodia.</p>
+          <span class="area">Acceso no autorizado</span>
+          <h4>Cuenta o sistema comprometido</h4>
+          <p>Entender cómo entraron y qué hicieron dentro, antes de que los logs desaparezcan.</p>
         </div>
         <div class="case-card">
-          <span class="area">Derecho Laboral</span>
-          <h4>Despido disciplinario</h4>
-          <p>Mensajes como prueba del incumplimiento laboral o del acoso. La empresa necesita que la evidencia aguante el contrainterrogatorio.</p>
+          <span class="area">Fuga de datos</span>
+          <h4>Posible robo de información</h4>
+          <p>Determinar qué datos se vieron expuestos y desde cuándo, para poder evaluar el impacto real.</p>
         </div>
         <div class="case-card">
-          <span class="area">Derecho Penal</span>
-          <h4>Amenazas y acoso telemático</h4>
-          <p>Publicaciones, mensajes y comunicaciones que acreditan el delito. La evidencia digital suele ser la prueba central.</p>
+          <span class="area">Malware</span>
+          <h4>Sistema infectado</h4>
+          <p>Identificar el tipo de malware, su comportamiento y si se ha movido a otros equipos de la red.</p>
         </div>
         <div class="case-card">
-          <span class="area">Derecho Mercantil</span>
-          <h4>Fraude e incumplimientos</h4>
-          <p>Correos electrónicos como prueba de acuerdos, robo de información confidencial por exempleados o socios.</p>
+          <span class="area">Uso indebido interno</span>
+          <h4>Sospecha de mal uso de sistemas corporativos</h4>
+          <p>Análisis técnico del dispositivo de empresa para entender qué ocurrió realmente.</p>
         </div>
       </div>
 
       <h2>El error más caro: esperar demasiado</h2>
 
-      <p>Hay una ventana de tiempo para actuar. Los logs de un servidor se sobreescriben. Las publicaciones en redes sociales se borran. Los dispositivos se formatean. Una vez que la evidencia desaparece, ningún perito del mundo puede recuperar lo que no existe.</p>
+      <p>Hay una ventana de tiempo para actuar. Los logs se sobrescriben, las sesiones caducan, los dispositivos se reutilizan. Una vez que la evidencia desaparece, ya no hay forma de recuperar lo que no existe.</p>
 
-      <p>La regla práctica: en cuanto un caso tiene componente digital, consultar con un perito informático antes de que las evidencias puedan perderse o deteriorarse. La consulta inicial es gratuita y en 30 minutos se puede valorar qué hay recuperable y qué no.</p>
-
-      <h2>¿Cuánto cuesta un dictamen pericial?</h2>
-
-      <ul>
-        <li><strong>Certificación de redes sociales o páginas web:</strong> desde 500€.</li>
-        <li><strong>Análisis de conversaciones de WhatsApp o correo electrónico:</strong> 600€–900€.</li>
-        <li><strong>Análisis forense de dispositivo móvil:</strong> 700€–1.200€.</li>
-        <li><strong>Análisis forense de ordenador o disco duro:</strong> 900€–1.800€.</li>
-        <li><strong>Ratificación presencial en juicio:</strong> 300€–800€ aparte.</li>
-      </ul>
-
-      <p>Los honorarios periciales son recuperables si hay condena en costas a la parte contraria. En la práctica, si ganas el procedimiento, los paga la parte contraria. Vale la pena confirmarlo con el cliente antes del encargo.</p>
+      <p>La regla práctica: en cuanto se detecta algo raro, aislar sin apagar y preservar lo que se pueda antes de intentar arreglarlo. La consulta inicial es gratuita y en 30 minutos se puede valorar qué hay recuperable y qué no.</p>
 
       <div class="article-cta">
-        <h3>Consulta gratuita de viabilidad del caso</h3>
-        <p>Cuéntame el caso en 5 minutos. Te digo si la evidencia digital tiene recorrido y cuánto costaría el dictamen. Sin compromiso.</p>
+        <h3>Consulta gratuita de viabilidad</h3>
+        <p>Cuéntame la situación en 5 minutos. Te digo qué evidencia se puede preservar y cómo.</p>
         <a href="mailto:nieveskaskero@hotmail.com">Escribir ahora →</a>
       </div>
 
@@ -195,9 +187,9 @@
     <span class="eyebrow">Seguir leyendo</span>
     <div class="related-grid">
       <div class="related-card">
-        <span class="tag">Peritaje</span>
-        <h4>¿Qué es un perito informático y cuándo necesitas uno?</h4>
-        <p>Todo lo que necesitas saber sobre el peritaje informático antes de contratar uno.</p>
+        <span class="tag">Respuesta a Incidentes</span>
+        <h4>Qué hacer en las primeras horas tras un incidente de seguridad</h4>
+        <p>Los pasos que marcan la diferencia entre contener un incidente y que se convierta en una crisis.</p>
         <a href="blog-perito-informatico.html">Leer artículo →</a>
       </div>
       <div class="related-card">
@@ -213,12 +205,12 @@
 <section class="contact" id="contacto">
   <div class="container">
     <div class="contact-inner">
-      <span class="eyebrow" style="color:#f0a8a8;">Para despachos de abogados</span>
-      <h2>¿Tienes un caso con evidencia digital?</h2>
-      <p>Primera consulta gratuita. Te digo en 30 minutos si hay algo con lo que trabajar.</p>
+      <span class="eyebrow" style="color:#f0a8a8;">Contacto</span>
+      <h2>¿Tienes un incidente de seguridad en curso?</h2>
+      <p>Primera consulta gratuita. Te digo en 30 minutos qué hacer y qué evidencia preservar.</p>
       <div class="contact-ctas">
-        <a href="mailto:nieveskaskero@hotmail.com" class="btn btn-primary">Consultar caso →</a>
-        <a href="servicios.html#pericial" class="btn btn-ghost-light">Ver servicio pericial →</a>
+        <a href="mailto:nieveskaskero@hotmail.com" class="btn btn-primary">Consultar ahora →</a>
+        <a href="servicios.html#forense" class="btn btn-ghost-light">Ver servicio forense →</a>
       </div>
       <div class="contact-links">
         <a href="https://www.linkedin.com/in/nieves-kaskero" target="_blank" rel="noopener">↗ LinkedIn</a>
@@ -236,7 +228,7 @@
       <a href="sobre-mi.html">Sobre mí</a>
       <a href="index.html#contacto">Contacto</a>
     </div>
-    © 2026 Nieves Casquero · Ciberseguridad para empresas y despachos · España
+    © 2026 Nieves Casquero · Ciberseguridad para empresas · España
   </div>
 </footer>
 
