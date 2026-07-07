@@ -1,0 +1,15 @@
+<svg width="640" height="160" viewBox="0 0 640 160" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icono: escudo con simbolo de terminal ">_" -->
+  <g transform="translate(10,15)">
+    <path d="M65 0 L130 20 L130 65 C130 105 100 128 65 145 C30 128 0 105 0 65 L0 20 Z"
+          fill="#102a43" stroke="#c1121f" stroke-width="5"/>
+    <path d="M65 8 L122 26 L122 65 C122 100 95 121 65 137 C35 121 8 100 8 65 L8 26 Z"
+          fill="none" stroke="#c1121f" stroke-width="1.5" opacity="0.4"/>
+    <text x="65" y="82" font-family="DejaVu Sans Mono, monospace" font-size="34" font-weight="700"
+          fill="#ffffff" text-anchor="middle">&gt;_</text>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="165" y="78" font-family="DejaVu Serif, Georgia, serif" font-size="52" font-weight="700" fill="#102a43">Nieves</text>
+  <text x="165" y="130" font-family="DejaVu Serif, Georgia, serif" font-size="52" font-weight="700" fill="#c1121f">Casquero</text>
+</svg>
