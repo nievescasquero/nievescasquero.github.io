@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<link rel="icon" type="image/png" href="../assets/favicon.png" />
+<title>Cybersecurity and GDPR Requirements in Spanish Public Tenders · Nieves Casquero</title>
+<meta name="description" content="What cybersecurity, GDPR/LOPDGDD and ENS clauses actually appear in Spanish municipal tenders, what the compliance report must include, and how to avoid missing the deadline." />
+<link rel="canonical" href="https://nievescasquero.github.io/en/blog-public-tenders.html" />
+<link rel="alternate" hreflang="en" href="https://nievescasquero.github.io/en/blog-public-tenders.html" />
+<link rel="alternate" hreflang="es" href="https://nievescasquero.github.io/blog-licitaciones-publicas.html" />
+<link rel="alternate" hreflang="x-default" href="https://nievescasquero.github.io/blog-licitaciones-publicas.html" />
+<meta property="og:title" content="Cybersecurity and GDPR Requirements in Spanish Public Tenders" />
+<meta property="og:description" content="A practical guide to cybersecurity, GDPR and ENS clauses in Spanish municipal tenders, with real examples." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nievescasquero.github.io/en/blog-public-tenders.html" />
+<link rel="stylesheet" href="../style.css?v=2" />
+<style>
+  .article-wrap { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+  .article-wrap .eyebrow { margin-bottom: 18px; }
+  .article-wrap h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.15; margin-bottom: 18px; }
+  .article-meta { font-size: 14px; color: var(--grey-2); margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--line); display: flex; gap: 20px; flex-wrap: wrap; }
+  .article-body p { font-size: 16.5px; color: #374151; line-height: 1.78; margin-bottom: 22px; }
+  .article-body h2 { font-size: 22px; margin: 44px 0 14px; color: var(--navy); }
+  .article-body ul { padding-left: 0; list-style: none; margin-bottom: 22px; display: grid; gap: 12px; }
+  .article-body ul li { font-size: 16px; color: #374151; padding-left: 22px; position: relative; line-height: 1.65; }
+  .article-body ul li::before { content: "—"; color: var(--red); position: absolute; left: 0; font-weight: 700; }
+  .article-body strong { color: var(--navy); }
+  .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+  .comp-card { border: 1px solid var(--line); padding: 22px; border-radius: 2px; }
+  .comp-card.featured { border-color: var(--navy); }
+  .comp-card .comp-title { font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .comp-card .comp-price { font-size: 22px; font-weight: 700; color: var(--red); margin-bottom: 10px; }
+  .comp-card p { font-size: 14px; color: var(--grey); margin: 0; }
+  .stat-box { background: var(--navy); color: #fff; padding: 28px 32px; border-radius: 2px; margin: 32px 0; display: flex; gap: 24px; align-items: center; }
+  .stat-box .stat-num { font-family: 'Source Serif 4', Georgia, serif; font-size: 42px; font-weight: 700; color: #fff; white-space: nowrap; }
+  .stat-box p { color: #cdd9e6; font-size: 15px; margin: 0; }
+  .article-cta { background: var(--navy); color: #fff; padding: 32px 36px; border-radius: 2px; margin-top: 56px; }
+  .article-cta h3 { color: #fff; font-size: 20px; margin-bottom: 10px; }
+  .article-cta p { color: #cdd9e6; font-size: 15px; margin-bottom: 20px; }
+  .article-cta a { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: #fff; padding: 13px 24px; font-weight: 600; font-size: 15px; border-radius: 2px; transition: background .15s; }
+  .article-cta a:hover { background: var(--red-2); }
+  .related { padding: 64px 0; background: var(--paper-2); border-top: 1px solid var(--line); }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 32px; }
+  .related-card { background: #fff; border: 1px solid var(--line); padding: 24px; border-radius: 2px; transition: transform .2s; }
+  .related-card:hover { transform: translateY(-2px); }
+  .related-card .tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--red); margin-bottom: 10px; display: block; }
+  .related-card h4 { font-size: 16px; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+  .related-card p { font-size: 13.5px; color: var(--grey); margin-bottom: 14px; }
+  .related-card a { font-size: 13.5px; font-weight: 600; color: var(--red); }
+  @media (max-width: 600px) { .comparison, .related-grid { grid-template-columns: 1fr; } .stat-box { flex-direction: column; gap: 12px; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cybersecurity and GDPR Requirements in Spanish Public Tenders",
+  "author": { "@type": "Person", "name": "Ana Nieves Casquero Benítez" },
+  "publisher": { "@type": "Organization", "name": "Nieves Casquero", "logo": { "@type": "ImageObject", "url": "https://nievescasquero.github.io/assets/logo.png" } },
+  "mainEntityOfPage": "https://nievescasquero.github.io/en/blog-public-tenders.html",
+  "description": "What cybersecurity, GDPR/LOPDGDD and ENS clauses actually appear in Spanish municipal tenders, what the compliance report must include, and how to avoid missing the deadline."
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo"><img src="../assets/logo.png" alt="Nieves Casquero" class="logo-img"></a>
+      <div class="navlinks">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <span class="lang-switch"><a href="../blog-licitaciones-publicas.html">ES</a><span class="sep">/</span><a href="#" class="active">EN</a></span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#blog">Blog</a> / Public tenders</div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="article-wrap">
+    <span class="eyebrow">Public Tenders · Compliance</span>
+    <h1>Cybersecurity and GDPR in Spanish public tenders: what the paperwork actually requires</h1>
+    <div class="article-meta">
+      <span>✍️ Ana Nieves Casquero Benítez</span>
+      <span>📍 Security Auditor & IT Expert Witness (AEPEJU) · La Línea de la Concepción, Spain</span>
+      <span>🌐 nievescasquero.github.io</span>
+    </div>
+
+    <div class="article-body">
+
+      <p>If your company sells software or hardware to Spanish local councils — parking or access-control systems, ANPR/license plate recognition, video surveillance, waste management, or booking platforms for public facilities — you'll increasingly run into tender documents (<em>pliegos</em>) that require a cybersecurity audit and GDPR/LOPDGDD compliance report as a condition to bid, not just as a nice-to-have.</p>
+
+      <p>This is especially common for concessions involving access control, license plate recognition (ANPR), video surveillance, traveller registration, or any platform that processes citizens' or users' personal data. Here's what these requirements actually look like, and what you need to have ready before the submission deadline closes.</p>
+
+      <h2>The clauses that show up most often</h2>
+
+      <ul>
+        <li><strong>Cybersecurity audit of the tendered system.</strong> Some tenders explicitly ask for a penetration test or vulnerability audit report on the platform being deployed, sometimes referencing INCIBE (Spain's national cybersecurity institute) as a benchmark — without necessarily requiring its direct involvement.</li>
+        <li><strong>GDPR/LOPDGDD compliance.</strong> Documentation on the legal basis for processing, technical and organisational measures, data retention periods, and often a data processing agreement with the contracting authority.</li>
+        <li><strong>Disclosure of server location and technology subcontractors.</strong> Where the data is hosted, which providers are involved (hosting, payment gateway, communications), and whether there are any transfers outside the EU.</li>
+        <li><strong>Compliance with Spain's National Security Framework (ENS).</strong> Increasingly common in video surveillance or infrastructure connected to public administrations.</li>
+        <li><strong>Traveller registration and telematic reporting (RD 933/2021).</strong> Mandatory for accommodation, motorhome areas and campsites: secure ID document scanning and automatic notification to law enforcement authorities.</li>
+        <li><strong>Network architecture and data flow diagrams.</strong> Proof of what data leaves the local network, what's encrypted, and what contingency measures exist if connectivity fails.</li>
+      </ul>
+
+      <h2>What the technical report needs to include</h2>
+
+      <p>A generic responsible declaration isn't enough. A report that actually satisfies these requirements typically includes:</p>
+
+      <ul>
+        <li>Vulnerability analysis or penetration testing of the exact system or platform under contract, with documented methodology.</li>
+        <li>A regulatory compliance review scoped specifically to the tendered service — not your company's generic privacy policy.</li>
+        <li>A map of data sub-processors and their role (payment processing, hosting, communications, analytics).</li>
+        <li>An assessment of network architecture: what data travels outside the installation, how it's encrypted, and what happens if connectivity is lost.</li>
+        <li>Documentation written so the evaluation committee can verify it unambiguously — a technical report they can't follow doesn't count as proof of compliance.</li>
+      </ul>
+
+      <h2>The most expensive mistake: leaving it until the last few days</h2>
+
+      <div class="stat-box">
+        <div class="stat-num">1–2 weeks</div>
+        <p>The typical timeline to complete a cybersecurity audit and the GDPR compliance report a tender requires — but only if you start with enough margin before the submission deadline.</p>
+      </div>
+
+      <p>Tender submission deadlines are fixed and cannot be extended. I've seen companies with an excellent technical and financial proposal get excluded simply because the cybersecurity documentation wasn't ready in time, or didn't specifically cover what the tender asked for. The evaluation committee cannot assess an incomplete bid, no matter how good the rest of it is.</p>
+
+      <h2>A common case: software vendors bidding to local councils</h2>
+
+      <p>I've helped companies in the parking management, access control and motorhome/camper area sector prepare this documentation for municipal tenders: a security audit of the platform, a GDPR/LOPDGDD compliance report, and network architecture documentation, all within the bid submission deadline. The same pattern repeats in low-emission zones, municipal video surveillance, waste management access control and public sports facilities: any system that identifies people or vehicles and connects to a public administration tends to require this kind of documentation — regardless of whether the vendor is based in Spain or elsewhere in the EU.</p>
+
+      <h2>Public tender audit vs. standard security audit</h2>
+
+      <div class="comparison">
+        <div class="comp-card">
+          <div class="comp-title">Web security audit</div>
+          <div class="comp-price">€450–€1,400</div>
+          <p>Scoped to your own website or application, with no specific format for a public administration. Useful as a baseline, but usually doesn't cover a tender's requirements on its own.</p>
+        </div>
+        <div class="comp-card featured">
+          <div class="comp-title">Public tender cybersecurity audit</div>
+          <div class="comp-price">€2,500–€4,500</div>
+          <p>Scoped specifically to the contracted system, with GDPR/LOPDGDD compliance, a sub-processor map, and documentation ready for the evaluation committee to verify without ambiguity. Delivered in 1–2 weeks.</p>
+        </div>
+      </div>
+
+      <p>If your company bids on Spanish public tenders regularly, it's worth treating this as a standard part of your bid preparation process rather than a one-off scramble — and, once a concession is awarded, keeping up an annual follow-up audit in line with the ongoing obligations these contracts usually include (breach notification, sub-processor review, updated technical measures).</p>
+
+      <div class="article-cta">
+        <h3>Bidding on a Spanish public tender with cybersecurity or GDPR requirements?</h3>
+        <p>Tell me your submission deadline and exactly what the tender document asks for. I'll tell you within 24h whether we can make it, and what a fixed-price quote would look like.</p>
+        <a href="mailto:nieveskaskero@hotmail.com">Discuss your case →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="related">
+  <div class="container">
+    <span class="eyebrow">Keep reading</span>
+    <div class="related-grid">
+      <div class="related-card">
+        <span class="tag">Web Security · Business</span>
+        <h4>When does your business need a web security audit?</h4>
+        <p>The warning signs that your website has vulnerabilities you don't know about — and what to do before an attacker finds them.</p>
+        <a href="blog-web-security-audit.html">Read article →</a>
+      </div>
+      <div class="related-card">
+        <span class="tag">Digital Forensics</span>
+        <h4>Why you should preserve digital evidence after an incident</h4>
+        <p>The logs, screenshots and access records that disappear in the first hours — and why acting fast changes everything.</p>
+        <a href="blog-digital-evidence.html">Read article →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <span class="eyebrow" style="color:#f0a8a8;">Contact</span>
+      <h2>Does your company bid on Spanish councils or public administrations?</h2>
+      <p>First consultation free. Fixed-price quote within 24h, matched to your submission deadline.</p>
+      <div class="contact-ctas">
+        <a href="mailto:nieveskaskero@hotmail.com" class="btn btn-primary">Request report →</a>
+        <a href="services.html" class="btn btn-ghost-light">View all services →</a>
+      </div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/nieves-kaskero" target="_blank" rel="noopener">↗ LinkedIn</a>
+        <a href="https://www.instagram.com/nieves.casquero" target="_blank" rel="noopener">↗ Instagram</a>
+        <a href="https://www.facebook.com/share/19HUsCCESJ/" target="_blank" rel="noopener">↗ Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    © 2026 Nieves Casquero · Cybersecurity for businesses · Spain
+  </div>
+</footer>
+
+</body>
+</html>
