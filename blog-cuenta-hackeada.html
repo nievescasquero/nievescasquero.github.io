@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<title>Señales de que te han hackeado una cuenta y qué hacer en las primeras horas · Nieves Casquero</title>
+<meta name="description" content="Cómo saber si alguien ha entrado en tu email, Instagram o WhatsApp sin permiso, y los pasos que hay que dar en las primeras horas para recuperar el control." />
+<link rel="canonical" href="https://nievescasquero.github.io/blog-cuenta-hackeada.html" />
+<link rel="alternate" hreflang="es" href="https://nievescasquero.github.io/blog-cuenta-hackeada.html" />
+<link rel="alternate" hreflang="en" href="https://nievescasquero.github.io/en/blog-hacked-account.html" />
+<link rel="alternate" hreflang="x-default" href="https://nievescasquero.github.io/blog-cuenta-hackeada.html" />
+<meta property="og:title" content="Señales de que te han hackeado una cuenta y qué hacer en las primeras horas" />
+<meta property="og:description" content="Las señales de que una cuenta personal ha sido hackeada, y los pasos concretos para las primeras 24 horas." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nievescasquero.github.io/blog-cuenta-hackeada.html" />
+<link rel="stylesheet" href="style.css?v=2" />
+<style>
+  .article-wrap { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+  .article-wrap .eyebrow { margin-bottom: 18px; }
+  .article-wrap h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.15; margin-bottom: 18px; }
+  .article-meta { font-size: 14px; color: var(--grey-2); margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--line); display: flex; gap: 20px; flex-wrap: wrap; }
+  .article-body p { font-size: 16.5px; color: #374151; line-height: 1.78; margin-bottom: 22px; }
+  .article-body h2 { font-size: 22px; margin: 44px 0 14px; color: var(--navy); }
+  .article-body ul { padding-left: 0; list-style: none; margin-bottom: 22px; display: grid; gap: 12px; }
+  .article-body ul li { font-size: 16px; color: #374151; padding-left: 22px; position: relative; line-height: 1.65; }
+  .article-body ul li::before { content: "—"; color: var(--red); position: absolute; left: 0; font-weight: 700; }
+  .article-body strong { color: var(--navy); }
+  .article-cta { background: var(--navy); color: #fff; padding: 32px 36px; border-radius: 2px; margin-top: 56px; }
+  .article-cta h3 { color: #fff; font-size: 20px; margin-bottom: 10px; }
+  .article-cta p { color: #cdd9e6; font-size: 15px; margin-bottom: 20px; }
+  .article-cta a { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: #fff; padding: 13px 24px; font-weight: 600; font-size: 15px; border-radius: 2px; transition: background .15s; }
+  .article-cta a:hover { background: var(--red-2); }
+  .related { padding: 64px 0; background: var(--paper-2); border-top: 1px solid var(--line); }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 32px; }
+  .related-card { background: #fff; border: 1px solid var(--line); padding: 24px; border-radius: 2px; transition: transform .2s; }
+  .related-card:hover { transform: translateY(-2px); }
+  .related-card .tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--red); margin-bottom: 10px; display: block; }
+  .related-card h4 { font-size: 16px; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+  .related-card p { font-size: 13.5px; color: var(--grey); margin-bottom: 14px; }
+  .related-card a { font-size: 13.5px; font-weight: 600; color: var(--red); }
+  @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo"><img src="assets/logo.png" alt="Nieves Casquero" class="logo-img"></a>
+      <div class="navlinks">
+        <a href="servicios.html">Servicios</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <span class="lang-switch"><a href="#" class="active">ES</a><span class="sep">/</span><a href="en/blog-hacked-account.html">EN</a></span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Inicio</a> / <a href="index.html#blog-particulares">Blog</a> / Cuenta Hackeada</div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="article-wrap">
+    <span class="eyebrow">Particulares · Diagnóstico</span>
+    <h1>Señales de que te han hackeado una cuenta y qué hacer en las primeras horas</h1>
+    <div class="article-meta">
+      <span>✍️ Ana Nieves Casquero Benítez</span>
+      <span>📍 Ciberseguridad Ofensiva · La Línea de la Concepción</span>
+      <span>🌐 nievescasquero.github.io</span>
+    </div>
+
+    <div class="article-body">
+      <p>Un email que no reconoces, una publicación que no hiciste tú, un amigo que te pregunta por un mensaje raro que le llegó de tu parte. Son señales clásicas de que alguien ha entrado en una de tus cuentas — y las primeras horas son las que más determinan si consigues recuperar el control rápido o si la cosa se complica.</p>
+
+      <p>Esto es lo que conviene vigilar, y lo que hay que hacer en cuanto lo detectas.</p>
+
+      <h2>Las señales que no deberías ignorar</h2>
+
+      <ul>
+        <li><strong>Avisos de inicio de sesión desconocidos.</strong> Un email o notificación de acceso desde un dispositivo o ubicación que no es la tuya.</li>
+        <li><strong>Un email de "restablecer contraseña" que no has pedido.</strong> Suele ser el primer paso de alguien intentando tomar el control antes que tú.</li>
+        <li><strong>Contactos tuyos reciben mensajes o enlaces raros</strong> que tú no has enviado.</li>
+        <li><strong>Aparecen publicaciones, "me gusta" o mensajes</strong> que no recuerdas haber hecho.</li>
+        <li><strong>Ya no puedes acceder con tu contraseña habitual.</strong></li>
+        <li><strong>Recibes códigos de verificación en dos pasos</strong> sin haberlos solicitado tú.</li>
+      </ul>
+
+      <h2>Qué hacer en las primeras 24 horas</h2>
+
+      <p>Cuanto antes actúes, menos margen le das a quien ha entrado. El orden importa:</p>
+
+      <ul>
+        <li><strong>Cambia la contraseña inmediatamente</strong>, si puedes desde otro dispositivo que sepas seguro.</li>
+        <li><strong>Revisa y cierra todas las sesiones activas</strong> desde la configuración de seguridad de la cuenta.</li>
+        <li><strong>Activa la verificación en dos pasos</strong> si todavía no la tenías.</li>
+        <li><strong>Revisa los dispositivos y apps conectadas</strong> a la cuenta y elimina lo que no reconozcas.</li>
+        <li><strong>Avisa a tus contactos</strong> si se ha usado tu cuenta para enviar mensajes, para que no caigan en la trampa.</li>
+      </ul>
+
+      <h2>Por qué merece la pena una revisión más a fondo</h2>
+
+      <p>Cambiar la contraseña trata el síntoma, no siempre la causa. Si el acceso vino de un phishing, un malware en tu móvil o una contraseña reutilizada que se filtró en otra web, el problema puede repetirse en semanas si no se identifica el origen real.</p>
+
+      <p>En una revisión de <strong>diagnóstico y cierre de brecha</strong>, además de cerrar el acceso, se identifica cómo entraron exactamente — para que no vuelva a pasar.</p>
+
+      <div class="article-cta">
+        <h3>¿Te ha pasado ahora mismo?</h3>
+        <p>Cuéntame qué ha pasado y en una videollamada revisamos juntos cómo entraron y cerramos el acceso.</p>
+        <a href="mailto:nieveskaskero@hotmail.com">Escribir ahora →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="related">
+  <div class="container">
+    <span class="eyebrow">Seguir leyendo</span>
+    <div class="related-grid">
+      <div class="related-card">
+        <span class="tag">Móvil</span>
+        <h4>Cómo saber si tu móvil tiene spyware</h4>
+        <p>Las señales de una app espía instalada en tu móvil y cómo comprobarlo.</p>
+        <a href="blog-spyware-movil.html">Leer artículo →</a>
+      </div>
+      <div class="related-card">
+        <span class="tag">Recuperación</span>
+        <h4>Guía para recuperar Instagram o WhatsApp robados</h4>
+        <p>Los pasos oficiales para recuperar el acceso, plataforma por plataforma.</p>
+        <a href="blog-recuperar-cuenta.html">Leer artículo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="contact-inner">
+      <span class="eyebrow" style="color:#f0a8a8;">Contacto</span>
+      <h2>¿Necesitas ayuda con tu caso?</h2>
+      <p>Primera consulta gratuita por email o videollamada, sin compromiso.</p>
+      <div class="contact-ctas">
+        <a href="mailto:nieveskaskero@hotmail.com" class="btn btn-primary">Escribir ahora →</a>
+        <a href="servicios.html#diagnostico-brecha" class="btn btn-ghost-light">Ver servicio →</a>
+      </div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/nieves-kaskero" target="_blank" rel="noopener">↗ LinkedIn</a>
+        <a href="https://www.instagram.com/nieves.casquero" target="_blank" rel="noopener">↗ Instagram</a>
+        <a href="https://www.facebook.com/share/19HUsCCESJ/" target="_blank" rel="noopener">↗ Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="index.html#contacto">Contacto</a>
+    </div>
+    © 2026 Nieves Casquero · Ciberseguridad para empresas y particulares · España
+  </div>
+</footer>
+
+
+<!-- Boton flotante WhatsApp -->
+<style>
+@keyframes wa-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.55); }
+  70% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+.wa-float-btn {
+  position: fixed; bottom: 24px; right: 24px; width: 58px; height: 58px;
+  background: #25D366; border-radius: 50%; display: flex; align-items: center;
+  justify-content: center; z-index: 9999; text-decoration: none;
+  animation: wa-pulse 2.5s infinite; transition: transform 0.2s ease;
+}
+.wa-float-btn:hover { transform: scale(1.08); }
+@media (max-width: 480px) { .wa-float-btn { width: 52px; height: 52px; bottom: 16px; right: 16px; } }
+</style>
+<a class="wa-float-btn" href="https://wa.me/34655276573?text=Hola%20Nieves%2C%20estoy%20interesado%2Fa%20en%20tus%20servicios%20de%20ciberseguridad" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+<svg viewBox="0 0 32 32" width="30" height="30" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M16 .5C7.44.5.5 7.44.5 16c0 2.82.74 5.47 2.03 7.76L.5 31.5l7.94-2.08A15.44 15.44 0 0 0 16 31.5c8.56 0 15.5-6.94 15.5-15.5S24.56.5 16 .5zm0 28.13c-2.5 0-4.85-.7-6.86-1.92l-.49-.29-4.71 1.23 1.26-4.6-.32-.47A12.86 12.86 0 0 1 3.13 16C3.13 8.9 8.9 3.13 16 3.13S28.88 8.9 28.88 16 23.1 28.88 16 28.88zm7.06-9.65c-.39-.2-2.3-1.13-2.66-1.26-.36-.13-.62-.2-.88.2-.26.39-1.01 1.26-1.24 1.52-.23.26-.46.29-.85.1-.39-.2-1.63-.6-3.11-1.92-1.15-1.02-1.92-2.29-2.15-2.68-.23-.39-.02-.6.17-.79.18-.18.39-.46.59-.69.2-.23.26-.39.39-.65.13-.26.07-.49-.03-.69-.1-.2-.88-2.12-1.2-2.9-.32-.76-.65-.66-.88-.67h-.75c-.26 0-.69.1-1.05.49-.36.39-1.37 1.34-1.37 3.27s1.4 3.79 1.6 4.05c.2.26 2.76 4.21 6.69 5.9.94.4 1.67.64 2.24.82.94.3 1.8.26 2.48.16.76-.11 2.3-.94 2.62-1.85.32-.91.32-1.69.23-1.85-.1-.16-.36-.26-.75-.46z"/></svg>
+</a>
+
+
+<!-- Popup captacion de leads (segmentado empresa/particular) -->
+<div id="nc-lead-overlay" style="display:none; position:fixed; inset:0; background:rgba(12,31,51,.6); z-index:10000; align-items:center; justify-content:center; padding:20px;">
+  <div style="background:#fff; max-width:440px; width:100%; border-radius:2px; padding:32px 28px 28px; position:relative; box-shadow:0 24px 60px -20px rgba(12,31,51,.5); max-height:90vh; overflow-y:auto;">
+    <button id="nc-lead-close" aria-label="Cerrar" style="position:absolute; top:14px; right:14px; background:none; border:none; font-size:22px; line-height:1; color:#8896a6; cursor:pointer;">&times;</button>
+
+    <div id="nc-lead-choice-state">
+      <span style="font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#c1121f; font-weight:700;">Descarga gratis</span>
+      <h3 style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px; line-height:1.3;">¿Quieres saber si tienes una brecha de seguridad ahora mismo?</h3>
+      <p style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;">Elige tu situación y te doy el checklist adecuado:</p>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <button type="button" data-segmento="empresa" class="nc-choice-btn" style="width:100%; text-align:left; padding:14px 16px; border:1.5px solid #102a43; border-radius:2px; background:transparent; color:#102a43; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit;">🏢 Tengo una empresa</button>
+        <button type="button" data-segmento="particular" class="nc-choice-btn" style="width:100%; text-align:left; padding:14px 16px; border:1.5px solid #102a43; border-radius:2px; background:transparent; color:#102a43; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit;">🙋 Es algo personal</button>
+      </div>
+    </div>
+
+    <div id="nc-lead-form-state" style="display:none;">
+      <button type="button" id="nc-lead-back" style="background:none; border:none; color:#8896a6; font-size:13px; cursor:pointer; padding:0; margin-bottom:12px; font-family:inherit;">← Volver</button>
+      <span style="font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#c1121f; font-weight:700;">Descarga gratis</span>
+      <h3 id="nc-form-headline" style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px; line-height:1.3;"></h3>
+      <p id="nc-form-body" style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;"></p>
+
+      <form id="nc-lead-form">
+        <input type="text" name="nombre" placeholder="Nombre" required style="width:100%; padding:11px 12px; margin-bottom:10px; border:1px solid #e2e8f0; border-radius:2px; font-size:14.5px; font-family:inherit; box-sizing:border-box;">
+        <input type="email" name="email" placeholder="Email" required style="width:100%; padding:11px 12px; margin-bottom:10px; border:1px solid #e2e8f0; border-radius:2px; font-size:14.5px; font-family:inherit; box-sizing:border-box;">
+        <input type="tel" name="telefono" placeholder="Teléfono" required style="width:100%; padding:11px 12px; margin-bottom:14px; border:1px solid #e2e8f0; border-radius:2px; font-size:14.5px; font-family:inherit; box-sizing:border-box;">
+        <input type="hidden" name="_subject" value="Nuevo lead - Checklist ciberseguridad">
+        <input type="hidden" name="segmento" id="nc-lead-segmento">
+        <input type="hidden" name="pagina" id="nc-lead-page">
+        <button type="submit" id="nc-form-submit" style="width:100%; padding:13px; background:#c1121f; color:#fff; border:none; border-radius:2px; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit;"></button>
+      </form>
+      <p style="color:#8896a6; font-size:11.5px; margin-top:14px; line-height:1.5;">Sin spam. Cero compromiso. Tus datos, tratados conforme a RGPD — te lo dice quien audita esto para otros.</p>
+      <p id="nc-lead-error" style="display:none; color:#c1121f; font-size:13px; margin-top:10px;">Ha habido un error. Escríbeme a nieveskaskero@hotmail.com y te lo envío directamente.</p>
+    </div>
+
+    <div id="nc-lead-thanks-state" style="display:none;">
+      <span style="font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#c1121f; font-weight:700;">¡Listo!</span>
+      <h3 style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px;">Aquí tienes tu checklist</h3>
+      <p style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;">Gracias. Descárgalo ahora y revísalo con calma.</p>
+      <a id="nc-thanks-download" href="#" target="_blank" rel="noopener" style="display:block; text-align:center; width:100%; padding:13px; background:#c1121f; color:#fff; border-radius:2px; font-size:15px; font-weight:600; text-decoration:none; box-sizing:border-box;">Descargar mi checklist →</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var FORM_ENDPOINT = "https://formspree.io/f/mwlkbbgp";
+  var CONTENT = {
+    empresa: {
+      headline: '¿Sabes si tu web tiene una puerta trasera abierta ahora mismo?',
+      body: 'Descarga gratis el checklist <strong>"10 señales de que tu empresa es vulnerable"</strong> y recibe alertas de seguridad prácticas, sin tecnicismos.',
+      cta: 'Quiero mi checklist gratis →',
+      pdf: "assets/descargas/checklist-10-senales-vulnerabilidad.pdf"
+    },
+    particular: {
+      headline: '¿Sabes si alguien tiene acceso a tus cuentas ahora mismo?',
+      body: 'Descarga gratis el checklist <strong>"10 señales de que te han hackeado"</strong> y recibe consejos prácticos para proteger tus cuentas.',
+      cta: 'Quiero mi checklist gratis →',
+      pdf: "assets/descargas/checklist-10-senales-hackeado.pdf"
+    }
+  };
+  var STORAGE_KEY = "nc_lead_popup_state";
+  var THREE_DAYS = 3*24*60*60*1000;
+
+  function getState(){ try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch(e){ return {}; } }
+  function setState(s){ try { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); } catch(e){} }
+
+  var state = getState();
+  var now = Date.now();
+  var shouldShow = !state.submitted && (!state.dismissedAt || (now - state.dismissedAt) > THREE_DAYS);
+
+  var overlay = document.getElementById('nc-lead-overlay');
+  var closeBtn = document.getElementById('nc-lead-close');
+  var backBtn = document.getElementById('nc-lead-back');
+  var choiceState = document.getElementById('nc-lead-choice-state');
+  var formState = document.getElementById('nc-lead-form-state');
+  var thanksState = document.getElementById('nc-lead-thanks-state');
+  var form = document.getElementById('nc-lead-form');
+  var pageField = document.getElementById('nc-lead-page');
+  var segmentoField = document.getElementById('nc-lead-segmento');
+  var errorMsg = document.getElementById('nc-lead-error');
+  var formHeadline = document.getElementById('nc-form-headline');
+  var formBody = document.getElementById('nc-form-body');
+  var formSubmit = document.getElementById('nc-form-submit');
+  var thanksDownload = document.getElementById('nc-thanks-download');
+  var currentSegment = null;
+
+  if (pageField) pageField.value = document.title + " - " + window.location.href;
+
+  if (shouldShow) {
+    setTimeout(function(){ overlay.style.display = 'flex'; }, 6000);
+  }
+
+  function closePopup(){
+    overlay.style.display = 'none';
+    var s = getState();
+    s.dismissedAt = Date.now();
+    setState(s);
+  }
+
+  function showChoice(){
+    choiceState.style.display = 'block';
+    formState.style.display = 'none';
+  }
+
+  function selectSegment(segmento){
+    currentSegment = segmento;
+    var c = CONTENT[segmento];
+    formHeadline.textContent = c.headline;
+    formBody.innerHTML = c.body;
+    formSubmit.textContent = c.cta;
+    segmentoField.value = segmento;
+    choiceState.style.display = 'none';
+    formState.style.display = 'block';
+  }
+
+  document.querySelectorAll('.nc-choice-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ selectSegment(btn.getAttribute('data-segmento')); });
+  });
+
+  if (backBtn) backBtn.addEventListener('click', showChoice);
+  if (closeBtn) closeBtn.addEventListener('click', closePopup);
+  if (overlay) overlay.addEventListener('click', function(e){ if (e.target === overlay) closePopup(); });
+
+  if (form) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      errorMsg.style.display = 'none';
+      var originalLabel = formSubmit.textContent;
+      formSubmit.disabled = true;
+      formSubmit.textContent = "Enviando...";
+
+      fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      }).then(function(res){
+        if (res.ok) {
+          var s = getState();
+          s.submitted = true;
+          setState(s);
+          var pdfPath = CONTENT[currentSegment].pdf;
+          thanksDownload.href = pdfPath;
+          formState.style.display = 'none';
+          thanksState.style.display = 'block';
+          window.open(pdfPath, '_blank');
+        } else {
+          throw new Error('bad response');
+        }
+      }).catch(function(){
+        errorMsg.style.display = 'block';
+        formSubmit.disabled = false;
+        formSubmit.textContent = originalLabel;
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
