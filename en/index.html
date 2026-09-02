@@ -49,6 +49,74 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why hire a freelancer instead of a big consultancy?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No sales layers or middle management: you talk to me from the first email through report delivery, which means a tighter price without losing technical rigor." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is confidentiality of my data guaranteed?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We sign an NDA before any work begins. All findings and evidence are handled under GDPR and deleted at project close if you request it." }
+    },
+    {
+      "@type": "Question",
+      "name": "What if you don't find any vulnerabilities?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You still receive a report with the methodology applied and scope covered — useful as evidence of due diligence for clients, insurers or compliance audits." }
+    },
+    {
+      "@type": "Question",
+      "name": "When and how do I pay?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Typically 50% when confirming the engagement and 50% on report delivery. For smaller projects, a single payment on delivery. No surprises: the price is fixed before starting." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you only work in Cádiz, or across Spain?",
+      "acceptedAnswer": { "@type": "Answer", "text": "100% remote across Spain. The initial consultation and results presentation are done by video call, no travel required." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you also fix the vulnerabilities you find?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The service covers detecting, documenting and prioritizing. Your technical team implements the fix, but I can support the process and validate that the fix closes the issue." }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do if I think a personal account has been hacked?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Message me as soon as possible, ideally within the first 24-48 hours — the sooner we act, the easier it is to shut down access and limit the damage. In a video call we'll go through what happened together." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it confidential if my case is personal, not a business?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, exactly the same as with businesses: I can sign an NDA if you need one, and your data is handled under GDPR, deleted once the case closes if you ask." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to bring in my device, or can everything be done remotely?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most cases are resolved remotely via screen share. Only expert-witness cases requiring deep forensic extraction might need the physical device." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use your report to file a police report?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, the legally valid report is designed exactly for that: documenting evidence with expert-witness methodology to support a police report or legal proceedings." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if my account can't ultimately be recovered?",
+      "acceptedAnswer": { "@type": "Answer", "text": "With the account recovery service, you only pay the handling fee (€40-€60) if it isn't recovered — never the full amount." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle harassment or cyberstalking cases, not just stolen accounts?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. It's one of the most common reasons for the legally valid report: documenting messages, screenshots and harassment patterns so they hold up as evidence." }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -108,12 +176,12 @@
     </div>
 
     <div class="risk-grid">
-      <div class="risk-card"><div class="ico">🔓</div><h4>Unauthorized access</h4><p>Forms, admin panels or APIs without proper protection, open to anyone.</p></div>
-      <div class="risk-card"><div class="ico">📂</div><h4>Exposed data</h4><p>Customer information accessible due to a simple server misconfiguration.</p></div>
-      <div class="risk-card"><div class="ico">⚖️</div><h4>GDPR non-compliance</h4><p>Fines of up to €20 million for lack of adequate technical measures.</p></div>
-      <div class="risk-card"><div class="ico">🦠</div><h4>Silent malware</h4><p>Malicious code installed on your site, stealing data without anyone noticing.</p></div>
-      <div class="risk-card"><div class="ico">📉</div><h4>Compromised reputation</h4><p>A public incident can destroy customer trust within days.</p></div>
-      <div class="risk-card"><div class="ico">🔑</div><h4>Leaked passwords & credentials</h4><p>Reused or previously breached credentials, the most common entry point.</p></div>
+      <a class="risk-card" href="services.html#web-audit"><div class="ico">🔓</div><h4>Unauthorized access</h4><p>Forms, admin panels or APIs without proper protection, open to anyone.</p></a>
+      <a class="risk-card" href="services.html#web-audit"><div class="ico">📂</div><h4>Exposed data</h4><p>Customer information accessible due to a simple server misconfiguration.</p></a>
+      <a class="risk-card" href="services.html#tenders"><div class="ico">⚖️</div><h4>GDPR non-compliance</h4><p>Fines of up to €20 million for lack of adequate technical measures.</p></a>
+      <a class="risk-card" href="services.html#forensics"><div class="ico">🦠</div><h4>Silent malware</h4><p>Malicious code installed on your site, stealing data without anyone noticing.</p></a>
+      <a class="risk-card" href="services.html#deep-assessment"><div class="ico">📉</div><h4>Compromised reputation</h4><p>A public incident can destroy customer trust within days.</p></a>
+      <a class="risk-card" href="services.html#deep-assessment"><div class="ico">🔑</div><h4>Leaked passwords & credentials</h4><p>Reused or previously breached credentials, the most common entry point.</p></a>
     </div>
   </div>
 </section>
@@ -311,6 +379,43 @@
   </div>
 </section>
 
+
+<section id="blog-individuals" style="padding:96px 0; background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Blog · Individuals</span>
+      <h2>Resources for individuals</h2>
+      <p>What to do if your account, your phone or your identity has been compromised.</p>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-card" style="display:flex; flex-direction:column;">
+        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--red); margin-bottom:12px;">Hacked Account</div>
+        <h4 style="font-size:17px; margin-bottom:10px; line-height:1.3;">Signs you've been hacked and what to do in the first few hours</h4>
+        <p style="flex-grow:1;">How to tell if someone has broken into your email, Instagram or WhatsApp, and the steps to take.</p>
+        <a href="blog-hacked-account.html" style="display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:600; color:var(--red); margin-top:16px;">Read article →</a>
+      </div>
+      <div class="risk-card" style="display:flex; flex-direction:column;">
+        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--red); margin-bottom:12px;">Phone Spyware</div>
+        <h4 style="font-size:17px; margin-bottom:10px; line-height:1.3;">How to tell if your phone has spyware or a spy app installed</h4>
+        <p style="flex-grow:1;">The warning signs of a spy app and how to check and clean your device step by step.</p>
+        <a href="blog-phone-spyware.html" style="display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:600; color:var(--red); margin-top:16px;">Read article →</a>
+      </div>
+      <div class="risk-card" style="display:flex; flex-direction:column;">
+        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--red); margin-bottom:12px;">Proving Harassment</div>
+        <h4 style="font-size:17px; margin-bottom:10px; line-height:1.3;">How to prove harassment or identity theft to police or in court</h4>
+        <p style="flex-grow:1;">What digital evidence actually holds weight, and how it needs to be documented.</p>
+        <a href="blog-proving-harassment.html" style="display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:600; color:var(--red); margin-top:16px;">Read article →</a>
+      </div>
+      <div class="risk-card" style="display:flex; flex-direction:column;">
+        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--red); margin-bottom:12px;">Recover Account</div>
+        <h4 style="font-size:17px; margin-bottom:10px; line-height:1.3;">Step-by-step guide to recovering a stolen Instagram or WhatsApp account</h4>
+        <p style="flex-grow:1;">The official steps to regain access, and what to do if the platform doesn't respond.</p>
+        <a href="blog-recover-stolen-account.html" style="display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:600; color:var(--red); margin-top:16px;">Read article →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section style="padding:96px 0; border-top:1px solid var(--line);">
   <div class="container">
     <div class="section-head">
@@ -341,6 +446,41 @@
       <div>
         <h4 style="font-size:16px; margin-bottom:8px;">Do you also fix the vulnerabilities you find?</h4>
         <p style="font-size:14.5px; color:var(--grey); line-height:1.65;">The service covers detecting, documenting and prioritizing. Your technical team implements the fix, but I can support the process and validate that the fix closes the issue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:96px 0 0;">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Individuals</span>
+      <h2>Frequently asked questions for individuals</h2>
+    </div>
+    <div class="faq-grid">
+      <div>
+        <h4 style="font-size:16px; margin-bottom:8px;">What should I do if I think a personal account has been hacked?</h4>
+        <p style="font-size:14.5px; color:var(--grey); line-height:1.65;">Message me as soon as possible, ideally within the first 24-48 hours — the sooner we act, the easier it is to shut down access and limit the damage. In a video call we'll go through what happened together.</p>
+      </div>
+      <div>
+        <h4 style="font-size:16px; margin-bottom:8px;">Is it confidential if my case is personal, not a business?</h4>
+        <p style="font-size:14.5px; color:var(--grey); line-height:1.65;">Yes, exactly the same as with businesses: I can sign an NDA if you need one, and your data is handled under GDPR, deleted once the case closes if you ask.</p>
+      </div>
+      <div>
+        <h4 style="font-size:16px; margin-bottom:8px;">Do I need to bring in my device, or can everything be done remotely?</h4>
+        <p style="font-size:14.5px; color:var(--grey); line-height:1.65;">Most cases are resolved remotely via screen share. Only expert-witness cases requiring deep forensic extraction might need the physical device.</p>
+      </div>
+      <div>
+        <h4 style="font-size:16px; margin-bottom:8px;">Can I use your report to file a police report?</h4>
+        <p style="font-size:14.5px; color:var(--grey); line-height:1.65;">Yes, the legally valid report is designed exactly for that: documenting evidence with expert-witness methodology to support a police report or legal proceedings.</p>
+      </div>
+      <div>
+        <h4 style="font-size:16px; margin-bottom:8px;">What happens if my account can't ultimately be recovered?</h4>
+        <p style="font-size:14.5px; color:var(--grey); line-height:1.65;">With the account recovery service, you only pay the handling fee (€40-€60) if it isn't recovered — never the full amount.</p>
+      </div>
+      <div>
+        <h4 style="font-size:16px; margin-bottom:8px;">Do you handle harassment or cyberstalking cases, not just stolen accounts?</h4>
+        <p style="font-size:14.5px; color:var(--grey); line-height:1.65;">Yes. It's one of the most common reasons for the legally valid report: documenting messages, screenshots and harassment patterns so they hold up as evidence.</p>
       </div>
     </div>
   </div>
@@ -410,23 +550,36 @@
 </a>
 
 
-<!-- Popup captacion de leads -->
+
+<!-- Popup captacion de leads (segmentado empresa/particular) -->
 <div id="nc-lead-overlay" style="display:none; position:fixed; inset:0; background:rgba(12,31,51,.6); z-index:10000; align-items:center; justify-content:center; padding:20px;">
   <div style="background:#fff; max-width:440px; width:100%; border-radius:2px; padding:32px 28px 28px; position:relative; box-shadow:0 24px 60px -20px rgba(12,31,51,.5); max-height:90vh; overflow-y:auto;">
     <button id="nc-lead-close" aria-label="Close" style="position:absolute; top:14px; right:14px; background:none; border:none; font-size:22px; line-height:1; color:#8896a6; cursor:pointer;">&times;</button>
 
-    <div id="nc-lead-form-state">
+    <div id="nc-lead-choice-state">
       <span style="font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#c1121f; font-weight:700;">Free download</span>
-      <h3 style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px; line-height:1.3;">Do you know if your website has a backdoor open right now?</h3>
-      <p style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;">Download the free checklist <strong>"10 signs your business is vulnerable"</strong> and get practical security tips, no jargon.</p>
+      <h3 style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px; line-height:1.3;">Want to know if you have a security gap right now?</h3>
+      <p style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;">Pick your situation and I'll give you the right checklist:</p>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <button type="button" data-segmento="empresa" class="nc-choice-btn" style="width:100%; text-align:left; padding:14px 16px; border:1.5px solid #102a43; border-radius:2px; background:transparent; color:#102a43; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit;">🏢 I run a business</button>
+        <button type="button" data-segmento="particular" class="nc-choice-btn" style="width:100%; text-align:left; padding:14px 16px; border:1.5px solid #102a43; border-radius:2px; background:transparent; color:#102a43; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit;">🙋 It's personal</button>
+      </div>
+    </div>
+
+    <div id="nc-lead-form-state" style="display:none;">
+      <button type="button" id="nc-lead-back" style="background:none; border:none; color:#8896a6; font-size:13px; cursor:pointer; padding:0; margin-bottom:12px; font-family:inherit;">← Back</button>
+      <span style="font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#c1121f; font-weight:700;">Free download</span>
+      <h3 id="nc-form-headline" style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px; line-height:1.3;"></h3>
+      <p id="nc-form-body" style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;"></p>
 
       <form id="nc-lead-form">
         <input type="text" name="nombre" placeholder="Name" required style="width:100%; padding:11px 12px; margin-bottom:10px; border:1px solid #e2e8f0; border-radius:2px; font-size:14.5px; font-family:inherit; box-sizing:border-box;">
         <input type="email" name="email" placeholder="Email" required style="width:100%; padding:11px 12px; margin-bottom:10px; border:1px solid #e2e8f0; border-radius:2px; font-size:14.5px; font-family:inherit; box-sizing:border-box;">
         <input type="tel" name="telefono" placeholder="Phone" required style="width:100%; padding:11px 12px; margin-bottom:14px; border:1px solid #e2e8f0; border-radius:2px; font-size:14.5px; font-family:inherit; box-sizing:border-box;">
         <input type="hidden" name="_subject" value="Nuevo lead - Checklist ciberseguridad">
+        <input type="hidden" name="segmento" id="nc-lead-segmento">
         <input type="hidden" name="pagina" id="nc-lead-page">
-        <button type="submit" style="width:100%; padding:13px; background:#c1121f; color:#fff; border:none; border-radius:2px; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit;">I want my free checklist →</button>
+        <button type="submit" id="nc-form-submit" style="width:100%; padding:13px; background:#c1121f; color:#fff; border:none; border-radius:2px; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit;"></button>
       </form>
       <p style="color:#8896a6; font-size:11.5px; margin-top:14px; line-height:1.5;">No spam. No obligation. Your data handled under GDPR — from the person who audits this for others.</p>
       <p id="nc-lead-error" style="display:none; color:#c1121f; font-size:13px; margin-top:10px;">Something went wrong. Email me at nieveskaskero@hotmail.com and I'll send it to you directly.</p>
@@ -436,14 +589,27 @@
       <span style="font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#c1121f; font-weight:700;">All set!</span>
       <h3 style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px;">Here's your checklist</h3>
       <p style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;">Thanks. Download it now and go through it whenever suits you.</p>
-      <a href="../assets/descargas/10-signs-your-business-is-vulnerable.pdf" target="_blank" rel="noopener" style="display:block; text-align:center; width:100%; padding:13px; background:#c1121f; color:#fff; border-radius:2px; font-size:15px; font-weight:600; text-decoration:none; box-sizing:border-box;">Download my checklist →</a>
+      <a id="nc-thanks-download" href="#" target="_blank" rel="noopener" style="display:block; text-align:center; width:100%; padding:13px; background:#c1121f; color:#fff; border-radius:2px; font-size:15px; font-weight:600; text-decoration:none; box-sizing:border-box;">Download my checklist →</a>
     </div>
   </div>
 </div>
 <script>
 (function(){
   var FORM_ENDPOINT = "https://formspree.io/f/mwlkbbgp";
-  var PDF_PATH = "../assets/descargas/10-signs-your-business-is-vulnerable.pdf";
+  var CONTENT = {
+    empresa: {
+      headline: 'Do you know if your website has a backdoor open right now?',
+      body: 'Download the free checklist <strong>"10 signs your business is vulnerable"</strong> and get practical security tips, no jargon.',
+      cta: 'I want my free checklist →',
+      pdf: "../assets/descargas/10-signs-your-business-is-vulnerable.pdf"
+    },
+    particular: {
+      headline: 'Do you know if someone has access to your accounts right now?',
+      body: 'Download the free checklist <strong>"10 signs you\'ve been hacked"</strong> and get practical tips to protect your accounts.',
+      cta: 'I want my free checklist →',
+      pdf: "../assets/descargas/10-signs-youve-been-hacked.pdf"
+    }
+  };
   var STORAGE_KEY = "nc_lead_popup_state";
   var THREE_DAYS = 3*24*60*60*1000;
 
@@ -456,11 +622,19 @@
 
   var overlay = document.getElementById('nc-lead-overlay');
   var closeBtn = document.getElementById('nc-lead-close');
-  var form = document.getElementById('nc-lead-form');
-  var pageField = document.getElementById('nc-lead-page');
-  var errorMsg = document.getElementById('nc-lead-error');
+  var backBtn = document.getElementById('nc-lead-back');
+  var choiceState = document.getElementById('nc-lead-choice-state');
   var formState = document.getElementById('nc-lead-form-state');
   var thanksState = document.getElementById('nc-lead-thanks-state');
+  var form = document.getElementById('nc-lead-form');
+  var pageField = document.getElementById('nc-lead-page');
+  var segmentoField = document.getElementById('nc-lead-segmento');
+  var errorMsg = document.getElementById('nc-lead-error');
+  var formHeadline = document.getElementById('nc-form-headline');
+  var formBody = document.getElementById('nc-form-body');
+  var formSubmit = document.getElementById('nc-form-submit');
+  var thanksDownload = document.getElementById('nc-thanks-download');
+  var currentSegment = null;
 
   if (pageField) pageField.value = document.title + " - " + window.location.href;
 
@@ -475,6 +649,27 @@
     setState(s);
   }
 
+  function showChoice(){
+    choiceState.style.display = 'block';
+    formState.style.display = 'none';
+  }
+
+  function selectSegment(segmento){
+    currentSegment = segmento;
+    var c = CONTENT[segmento];
+    formHeadline.textContent = c.headline;
+    formBody.innerHTML = c.body;
+    formSubmit.textContent = c.cta;
+    segmentoField.value = segmento;
+    choiceState.style.display = 'none';
+    formState.style.display = 'block';
+  }
+
+  document.querySelectorAll('.nc-choice-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ selectSegment(btn.getAttribute('data-segmento')); });
+  });
+
+  if (backBtn) backBtn.addEventListener('click', showChoice);
   if (closeBtn) closeBtn.addEventListener('click', closePopup);
   if (overlay) overlay.addEventListener('click', function(e){ if (e.target === overlay) closePopup(); });
 
@@ -482,10 +677,9 @@
     form.addEventListener('submit', function(e){
       e.preventDefault();
       errorMsg.style.display = 'none';
-      var submitBtn = form.querySelector('button[type="submit"]');
-      var originalLabel = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Sending...";
+      var originalLabel = formSubmit.textContent;
+      formSubmit.disabled = true;
+      formSubmit.textContent = "Sending...";
 
       fetch(FORM_ENDPOINT, {
         method: 'POST',
@@ -496,16 +690,18 @@
           var s = getState();
           s.submitted = true;
           setState(s);
+          var pdfPath = CONTENT[currentSegment].pdf;
+          thanksDownload.href = pdfPath;
           formState.style.display = 'none';
           thanksState.style.display = 'block';
-          window.open(PDF_PATH, '_blank');
+          window.open(pdfPath, '_blank');
         } else {
           throw new Error('bad response');
         }
       }).catch(function(){
         errorMsg.style.display = 'block';
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalLabel;
+        formSubmit.disabled = false;
+        formSubmit.textContent = originalLabel;
       });
     });
   }
