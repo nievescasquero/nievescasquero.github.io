@@ -394,5 +394,108 @@
 <svg viewBox="0 0 32 32" width="30" height="30" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M16 .5C7.44.5.5 7.44.5 16c0 2.82.74 5.47 2.03 7.76L.5 31.5l7.94-2.08A15.44 15.44 0 0 0 16 31.5c8.56 0 15.5-6.94 15.5-15.5S24.56.5 16 .5zm0 28.13c-2.5 0-4.85-.7-6.86-1.92l-.49-.29-4.71 1.23 1.26-4.6-.32-.47A12.86 12.86 0 0 1 3.13 16C3.13 8.9 8.9 3.13 16 3.13S28.88 8.9 28.88 16 23.1 28.88 16 28.88zm7.06-9.65c-.39-.2-2.3-1.13-2.66-1.26-.36-.13-.62-.2-.88.2-.26.39-1.01 1.26-1.24 1.52-.23.26-.46.29-.85.1-.39-.2-1.63-.6-3.11-1.92-1.15-1.02-1.92-2.29-2.15-2.68-.23-.39-.02-.6.17-.79.18-.18.39-.46.59-.69.2-.23.26-.39.39-.65.13-.26.07-.49-.03-.69-.1-.2-.88-2.12-1.2-2.9-.32-.76-.65-.66-.88-.67h-.75c-.26 0-.69.1-1.05.49-.36.39-1.37 1.34-1.37 3.27s1.4 3.79 1.6 4.05c.2.26 2.76 4.21 6.69 5.9.94.4 1.67.64 2.24.82.94.3 1.8.26 2.48.16.76-.11 2.3-.94 2.62-1.85.32-.91.32-1.69.23-1.85-.1-.16-.36-.26-.75-.46z"/></svg>
 </a>
 
+
+<!-- Popup captacion de leads -->
+<div id="nc-lead-overlay" style="display:none; position:fixed; inset:0; background:rgba(12,31,51,.6); z-index:10000; align-items:center; justify-content:center; padding:20px;">
+  <div style="background:#fff; max-width:440px; width:100%; border-radius:2px; padding:32px 28px 28px; position:relative; box-shadow:0 24px 60px -20px rgba(12,31,51,.5); max-height:90vh; overflow-y:auto;">
+    <button id="nc-lead-close" aria-label="Close" style="position:absolute; top:14px; right:14px; background:none; border:none; font-size:22px; line-height:1; color:#8896a6; cursor:pointer;">&times;</button>
+
+    <div id="nc-lead-form-state">
+      <span style="font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#c1121f; font-weight:700;">Free download</span>
+      <h3 style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px; line-height:1.3;">Do you know if your website has a backdoor open right now?</h3>
+      <p style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;">Download the free checklist <strong>"10 signs your business is vulnerable"</strong> and get practical security tips, no jargon.</p>
+
+      <form id="nc-lead-form">
+        <input type="text" name="nombre" placeholder="Name" required style="width:100%; padding:11px 12px; margin-bottom:10px; border:1px solid #e2e8f0; border-radius:2px; font-size:14.5px; font-family:inherit; box-sizing:border-box;">
+        <input type="email" name="email" placeholder="Email" required style="width:100%; padding:11px 12px; margin-bottom:10px; border:1px solid #e2e8f0; border-radius:2px; font-size:14.5px; font-family:inherit; box-sizing:border-box;">
+        <input type="tel" name="telefono" placeholder="Phone" required style="width:100%; padding:11px 12px; margin-bottom:14px; border:1px solid #e2e8f0; border-radius:2px; font-size:14.5px; font-family:inherit; box-sizing:border-box;">
+        <input type="hidden" name="_subject" value="Nuevo lead - Checklist ciberseguridad">
+        <input type="hidden" name="pagina" id="nc-lead-page">
+        <button type="submit" style="width:100%; padding:13px; background:#c1121f; color:#fff; border:none; border-radius:2px; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit;">I want my free checklist →</button>
+      </form>
+      <p style="color:#8896a6; font-size:11.5px; margin-top:14px; line-height:1.5;">No spam. No obligation. Your data handled under GDPR — from the person who audits this for others.</p>
+      <p id="nc-lead-error" style="display:none; color:#c1121f; font-size:13px; margin-top:10px;">Something went wrong. Email me at nieveskaskero@hotmail.com and I'll send it to you directly.</p>
+    </div>
+
+    <div id="nc-lead-thanks-state" style="display:none;">
+      <span style="font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#c1121f; font-weight:700;">All set!</span>
+      <h3 style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px;">Here's your checklist</h3>
+      <p style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;">Thanks. Download it now and go through it whenever suits you.</p>
+      <a href="../assets/descargas/10-signs-your-business-is-vulnerable.pdf" target="_blank" rel="noopener" style="display:block; text-align:center; width:100%; padding:13px; background:#c1121f; color:#fff; border-radius:2px; font-size:15px; font-weight:600; text-decoration:none; box-sizing:border-box;">Download my checklist →</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var FORM_ENDPOINT = "https://formspree.io/f/mwlkbbgp";
+  var PDF_PATH = "../assets/descargas/10-signs-your-business-is-vulnerable.pdf";
+  var STORAGE_KEY = "nc_lead_popup_state";
+  var THREE_DAYS = 3*24*60*60*1000;
+
+  function getState(){ try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch(e){ return {}; } }
+  function setState(s){ try { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); } catch(e){} }
+
+  var state = getState();
+  var now = Date.now();
+  var shouldShow = !state.submitted && (!state.dismissedAt || (now - state.dismissedAt) > THREE_DAYS);
+
+  var overlay = document.getElementById('nc-lead-overlay');
+  var closeBtn = document.getElementById('nc-lead-close');
+  var form = document.getElementById('nc-lead-form');
+  var pageField = document.getElementById('nc-lead-page');
+  var errorMsg = document.getElementById('nc-lead-error');
+  var formState = document.getElementById('nc-lead-form-state');
+  var thanksState = document.getElementById('nc-lead-thanks-state');
+
+  if (pageField) pageField.value = document.title + " - " + window.location.href;
+
+  if (shouldShow) {
+    setTimeout(function(){ overlay.style.display = 'flex'; }, 6000);
+  }
+
+  function closePopup(){
+    overlay.style.display = 'none';
+    var s = getState();
+    s.dismissedAt = Date.now();
+    setState(s);
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', closePopup);
+  if (overlay) overlay.addEventListener('click', function(e){ if (e.target === overlay) closePopup(); });
+
+  if (form) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      errorMsg.style.display = 'none';
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var originalLabel = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+
+      fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      }).then(function(res){
+        if (res.ok) {
+          var s = getState();
+          s.submitted = true;
+          setState(s);
+          formState.style.display = 'none';
+          thanksState.style.display = 'block';
+          window.open(PDF_PATH, '_blank');
+        } else {
+          throw new Error('bad response');
+        }
+      }).catch(function(){
+        errorMsg.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      });
+    });
+  }
+})();
+</script>
+
 </body>
 </html>
