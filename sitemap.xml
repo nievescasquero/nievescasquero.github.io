@@ -36,6 +36,26 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://nievescasquero.github.io/blog-cuenta-hackeada.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nievescasquero.github.io/blog-spyware-movil.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nievescasquero.github.io/blog-probar-acoso.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nievescasquero.github.io/blog-recuperar-cuenta.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://nievescasquero.github.io/en/index.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -69,5 +89,25 @@
     <loc>https://nievescasquero.github.io/en/blog-incident-response.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nievescasquero.github.io/en/blog-hacked-account.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://nievescasquero.github.io/en/blog-phone-spyware.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://nievescasquero.github.io/en/blog-proving-harassment.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://nievescasquero.github.io/en/blog-recover-stolen-account.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 </urlset>
