@@ -272,23 +272,36 @@
 </a>
 
 
-<!-- Popup captacion de leads -->
+
+<!-- Popup captacion de leads (segmentado empresa/particular) -->
 <div id="nc-lead-overlay" style="display:none; position:fixed; inset:0; background:rgba(12,31,51,.6); z-index:10000; align-items:center; justify-content:center; padding:20px;">
   <div style="background:#fff; max-width:440px; width:100%; border-radius:2px; padding:32px 28px 28px; position:relative; box-shadow:0 24px 60px -20px rgba(12,31,51,.5); max-height:90vh; overflow-y:auto;">
     <button id="nc-lead-close" aria-label="Cerrar" style="position:absolute; top:14px; right:14px; background:none; border:none; font-size:22px; line-height:1; color:#8896a6; cursor:pointer;">&times;</button>
 
-    <div id="nc-lead-form-state">
+    <div id="nc-lead-choice-state">
       <span style="font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#c1121f; font-weight:700;">Descarga gratis</span>
-      <h3 style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px; line-height:1.3;">¿Sabes si tu web tiene una puerta trasera abierta ahora mismo?</h3>
-      <p style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;">Descarga gratis el checklist <strong>"10 señales de que tu empresa es vulnerable"</strong> y recibe alertas de seguridad prácticas, sin tecnicismos.</p>
+      <h3 style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px; line-height:1.3;">¿Quieres saber si tienes una brecha de seguridad ahora mismo?</h3>
+      <p style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;">Elige tu situación y te doy el checklist adecuado:</p>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <button type="button" data-segmento="empresa" class="nc-choice-btn" style="width:100%; text-align:left; padding:14px 16px; border:1.5px solid #102a43; border-radius:2px; background:transparent; color:#102a43; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit;">🏢 Tengo una empresa</button>
+        <button type="button" data-segmento="particular" class="nc-choice-btn" style="width:100%; text-align:left; padding:14px 16px; border:1.5px solid #102a43; border-radius:2px; background:transparent; color:#102a43; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit;">🙋 Es algo personal</button>
+      </div>
+    </div>
+
+    <div id="nc-lead-form-state" style="display:none;">
+      <button type="button" id="nc-lead-back" style="background:none; border:none; color:#8896a6; font-size:13px; cursor:pointer; padding:0; margin-bottom:12px; font-family:inherit;">← Volver</button>
+      <span style="font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#c1121f; font-weight:700;">Descarga gratis</span>
+      <h3 id="nc-form-headline" style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px; line-height:1.3;"></h3>
+      <p id="nc-form-body" style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;"></p>
 
       <form id="nc-lead-form">
         <input type="text" name="nombre" placeholder="Nombre" required style="width:100%; padding:11px 12px; margin-bottom:10px; border:1px solid #e2e8f0; border-radius:2px; font-size:14.5px; font-family:inherit; box-sizing:border-box;">
         <input type="email" name="email" placeholder="Email" required style="width:100%; padding:11px 12px; margin-bottom:10px; border:1px solid #e2e8f0; border-radius:2px; font-size:14.5px; font-family:inherit; box-sizing:border-box;">
         <input type="tel" name="telefono" placeholder="Teléfono" required style="width:100%; padding:11px 12px; margin-bottom:14px; border:1px solid #e2e8f0; border-radius:2px; font-size:14.5px; font-family:inherit; box-sizing:border-box;">
         <input type="hidden" name="_subject" value="Nuevo lead - Checklist ciberseguridad">
+        <input type="hidden" name="segmento" id="nc-lead-segmento">
         <input type="hidden" name="pagina" id="nc-lead-page">
-        <button type="submit" style="width:100%; padding:13px; background:#c1121f; color:#fff; border:none; border-radius:2px; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit;">Quiero mi checklist gratis →</button>
+        <button type="submit" id="nc-form-submit" style="width:100%; padding:13px; background:#c1121f; color:#fff; border:none; border-radius:2px; font-size:15px; font-weight:600; cursor:pointer; font-family:inherit;"></button>
       </form>
       <p style="color:#8896a6; font-size:11.5px; margin-top:14px; line-height:1.5;">Sin spam. Cero compromiso. Tus datos, tratados conforme a RGPD — te lo dice quien audita esto para otros.</p>
       <p id="nc-lead-error" style="display:none; color:#c1121f; font-size:13px; margin-top:10px;">Ha habido un error. Escríbeme a nieveskaskero@hotmail.com y te lo envío directamente.</p>
@@ -298,14 +311,27 @@
       <span style="font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#c1121f; font-weight:700;">¡Listo!</span>
       <h3 style="font-family:'Source Serif 4', Georgia, serif; color:#102a43; font-size:21px; margin:10px 0 12px;">Aquí tienes tu checklist</h3>
       <p style="color:#5b6b7d; font-size:14.5px; line-height:1.55; margin-bottom:18px;">Gracias. Descárgalo ahora y revísalo con calma.</p>
-      <a href="assets/descargas/checklist-10-senales-vulnerabilidad.pdf" target="_blank" rel="noopener" style="display:block; text-align:center; width:100%; padding:13px; background:#c1121f; color:#fff; border-radius:2px; font-size:15px; font-weight:600; text-decoration:none; box-sizing:border-box;">Descargar mi checklist →</a>
+      <a id="nc-thanks-download" href="#" target="_blank" rel="noopener" style="display:block; text-align:center; width:100%; padding:13px; background:#c1121f; color:#fff; border-radius:2px; font-size:15px; font-weight:600; text-decoration:none; box-sizing:border-box;">Descargar mi checklist →</a>
     </div>
   </div>
 </div>
 <script>
 (function(){
   var FORM_ENDPOINT = "https://formspree.io/f/mwlkbbgp";
-  var PDF_PATH = "assets/descargas/checklist-10-senales-vulnerabilidad.pdf";
+  var CONTENT = {
+    empresa: {
+      headline: '¿Sabes si tu web tiene una puerta trasera abierta ahora mismo?',
+      body: 'Descarga gratis el checklist <strong>"10 señales de que tu empresa es vulnerable"</strong> y recibe alertas de seguridad prácticas, sin tecnicismos.',
+      cta: 'Quiero mi checklist gratis →',
+      pdf: "assets/descargas/checklist-10-senales-vulnerabilidad.pdf"
+    },
+    particular: {
+      headline: '¿Sabes si alguien tiene acceso a tus cuentas ahora mismo?',
+      body: 'Descarga gratis el checklist <strong>"10 señales de que te han hackeado"</strong> y recibe consejos prácticos para proteger tus cuentas.',
+      cta: 'Quiero mi checklist gratis →',
+      pdf: "assets/descargas/checklist-10-senales-hackeado.pdf"
+    }
+  };
   var STORAGE_KEY = "nc_lead_popup_state";
   var THREE_DAYS = 3*24*60*60*1000;
 
@@ -318,11 +344,19 @@
 
   var overlay = document.getElementById('nc-lead-overlay');
   var closeBtn = document.getElementById('nc-lead-close');
-  var form = document.getElementById('nc-lead-form');
-  var pageField = document.getElementById('nc-lead-page');
-  var errorMsg = document.getElementById('nc-lead-error');
+  var backBtn = document.getElementById('nc-lead-back');
+  var choiceState = document.getElementById('nc-lead-choice-state');
   var formState = document.getElementById('nc-lead-form-state');
   var thanksState = document.getElementById('nc-lead-thanks-state');
+  var form = document.getElementById('nc-lead-form');
+  var pageField = document.getElementById('nc-lead-page');
+  var segmentoField = document.getElementById('nc-lead-segmento');
+  var errorMsg = document.getElementById('nc-lead-error');
+  var formHeadline = document.getElementById('nc-form-headline');
+  var formBody = document.getElementById('nc-form-body');
+  var formSubmit = document.getElementById('nc-form-submit');
+  var thanksDownload = document.getElementById('nc-thanks-download');
+  var currentSegment = null;
 
   if (pageField) pageField.value = document.title + " - " + window.location.href;
 
@@ -337,6 +371,27 @@
     setState(s);
   }
 
+  function showChoice(){
+    choiceState.style.display = 'block';
+    formState.style.display = 'none';
+  }
+
+  function selectSegment(segmento){
+    currentSegment = segmento;
+    var c = CONTENT[segmento];
+    formHeadline.textContent = c.headline;
+    formBody.innerHTML = c.body;
+    formSubmit.textContent = c.cta;
+    segmentoField.value = segmento;
+    choiceState.style.display = 'none';
+    formState.style.display = 'block';
+  }
+
+  document.querySelectorAll('.nc-choice-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ selectSegment(btn.getAttribute('data-segmento')); });
+  });
+
+  if (backBtn) backBtn.addEventListener('click', showChoice);
   if (closeBtn) closeBtn.addEventListener('click', closePopup);
   if (overlay) overlay.addEventListener('click', function(e){ if (e.target === overlay) closePopup(); });
 
@@ -344,10 +399,9 @@
     form.addEventListener('submit', function(e){
       e.preventDefault();
       errorMsg.style.display = 'none';
-      var submitBtn = form.querySelector('button[type="submit"]');
-      var originalLabel = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Enviando...";
+      var originalLabel = formSubmit.textContent;
+      formSubmit.disabled = true;
+      formSubmit.textContent = "Enviando...";
 
       fetch(FORM_ENDPOINT, {
         method: 'POST',
@@ -358,16 +412,18 @@
           var s = getState();
           s.submitted = true;
           setState(s);
+          var pdfPath = CONTENT[currentSegment].pdf;
+          thanksDownload.href = pdfPath;
           formState.style.display = 'none';
           thanksState.style.display = 'block';
-          window.open(PDF_PATH, '_blank');
+          window.open(pdfPath, '_blank');
         } else {
           throw new Error('bad response');
         }
       }).catch(function(){
         errorMsg.style.display = 'block';
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalLabel;
+        formSubmit.disabled = false;
+        formSubmit.textContent = originalLabel;
       });
     });
   }
