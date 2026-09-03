@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<title>Bug Bounty: De Cero a Tu Primera Recompensa · Nieves Casquero</title>
+<meta name="description" content="Bug Bounty: De Cero a Tu Primera Recompensa: la metodología real de reconocimiento, caza de vulnerabilidades y redacción de informes, con el único capítulo en español sobre fiscalidad de recompensas. Por Nieves Casquero." />
+<link rel="canonical" href="https://nievescasquero.github.io/bug-bounty.html" />
+<meta property="og:title" content="Bug Bounty: De Cero a Tu Primera Recompensa · Nieves Casquero" />
+<meta property="og:description" content="La metodología completa que conecta el reconocimiento de un objetivo con la recompensa que efectivamente se cobra, rechazos incluidos." />
+<meta property="og:type" content="book" />
+<meta property="og:url" content="https://nievescasquero.github.io/bug-bounty.html" />
+<meta property="og:image" content="https://nievescasquero.github.io/assets/libro-bugbounty-portada.jpg" />
+<meta property="og:image:width" content="1000" />
+<meta property="og:image:height" content="1413" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="style.css?v=2" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://nievescasquero.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Bug Bounty" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Bug Bounty: De Cero a Tu Primera Recompensa: Metodología real de reconocimiento, caza de vulnerabilidades y redacción de informes",
+  "author": { "@type": "Person", "name": "Nieves Casquero" },
+  "bookFormat": "https://schema.org/Paperback",
+  "inLanguage": "es",
+  "numberOfPages": 58,
+  "audience": { "@type": "Audience", "audienceType": "Personas con base técnica en redes, web y línea de comandos que quieren cazar su primera recompensa de bug bounty" },
+  "url": "https://nievescasquero.github.io/bug-bounty.html",
+  "offers": [
+    {
+      "@type": "Offer",
+      "url": "https://www.amazon.es/dp/B0HHLCYS3S",
+      "priceCurrency": "EUR",
+      "price": "18.71",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://www.amazon.es/dp/B0HHLCYS3S",
+      "priceCurrency": "EUR",
+      "price": "7.99",
+      "availability": "https://schema.org/InStock"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿En qué formatos está disponible?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En tapa blanda (18,71€) y en versión digital para Kindle (7,99€), ambos a través de Amazon."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito conocimientos previos para leerlo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, está pensado para quien parte de una base técnica razonable en redes, web y línea de comandos y quiere cazar su primera recompensa real, y también para quien ya ha enviado algún informe y no entiende todavía por qué le rebotan más de los que le aceptan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Incluye plantillas utilizables directamente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, el apéndice incluye informe de bug bounty, checklist de reconocimiento y checklist previa al envío, listos para adaptar a tu primer caso real."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El capítulo de fiscalidad aplica fuera de España?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, ese capítulo está enfocado específicamente en la fiscalidad española (IVA, IRPF, modelo 130, alta como autónomo). El resto del libro —metodología, reconocimiento y redacción de informes— es igual de útil para cualquier país."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo"><img src="assets/logo.png" alt="Nieves Casquero" class="logo-img"></a>
+      <div class="navlinks">
+        <a href="servicios.html">Servicios</a>
+        <a href="blog.html">Blog</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Inicio</a> / Bug Bounty</div>
+      <span class="eyebrow" style="color:#f0a8a8;">Guía práctica</span>
+      <h1>Bug Bounty: De Cero a Tu Primera Recompensa</h1>
+      <p>¿Por qué el 90% de tus informes van a rebotar, y por qué eso no significa que lo estés haciendo mal? La metodología real que conecta el reconocimiento de un objetivo con la recompensa que efectivamente se cobra.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:16px 0 72px;">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:320px 1fr; gap:48px; align-items:start;">
+
+      <div style="border-radius:4px; overflow:hidden; box-shadow:0 20px 45px -18px rgba(0,0,0,.45); position:sticky; top:24px;">
+        <img src="assets/libro-bugbounty-portada.jpg" alt="Portada del libro Bug Bounty: De Cero a Tu Primera Recompensa, de Nieves Casquero" style="width:100%; height:auto; display:block;">
+      </div>
+
+      <div>
+        <div class="about-badges" style="margin-bottom:22px;">
+          <span class="badge">23 capítulos</span>
+          <span class="badge">Apéndice de plantillas</span>
+          <span class="badge">Español</span>
+          <span class="badge">Capítulo de fiscalidad España</span>
+        </div>
+
+        <h3 style="font-family:'Source Serif 4', Georgia, serif; color:var(--navy); font-size:20px; margin-bottom:10px;">Sobre el libro</h3>
+        <p style="color:var(--grey); font-size:15px; line-height:1.75; margin-bottom:14px;">
+          Bug Bounty: De Cero a Tu Primera Recompensa es la guía que nadie te da antes de enviar tu primer informe: no un curso de hacking —para eso ya existen recursos excelentes—, sino la metodología completa que conecta el reconocimiento de un objetivo con la recompensa que efectivamente se cobra, contada por alguien que la ha ejecutado de verdad, rechazos incluidos.
+        </p>
+
+        <h3 style="font-family:'Source Serif 4', Georgia, serif; color:var(--navy); font-size:18px; margin:26px 0 10px;">Qué encontrarás en sus 23 capítulos</h3>
+        <ul class="svc-detail-list">
+          <li>Cómo elegir tu primer programa y por qué el objetivo "grande y famoso" es la peor opción para empezar.</li>
+          <li>Metodología de reconocimiento paso a paso —subfinder, gau, httpx, katana— y cómo automatizarla con criterio.</li>
+          <li>Nueve categorías de vulnerabilidad explicadas con casos reales anonimizados: control de acceso roto, SSRF, lógica de negocio, GraphQL, subdomain takeover, CORS, JWT y más.</li>
+          <li>Cómo redactar un informe que no rebote, y cómo apelar un rechazo sin quemar la relación con un programa.</li>
+          <li>Un capítulo que ningún otro libro de bug bounty en español cubre: qué hacer fiscalmente en España con tu primera recompensa (IVA, IRPF, modelo 130, alta como autónomo).</li>
+          <li>Un apéndice con plantillas listas para usar: informe de bug bounty, checklist de reconocimiento y checklist previa al envío.</li>
+        </ul>
+
+        <div style="display:flex; gap:14px; flex-wrap:wrap; margin:28px 0 8px;">
+          <a href="https://www.amazon.es/dp/B0HHLCYS3S" target="_blank" rel="noopener" class="btn btn-primary">Tapa blanda · 18,71€ →</a>
+          <a href="https://www.amazon.es/dp/B0HHLCYS3S" target="_blank" rel="noopener" class="btn btn-ghost">Kindle · 7,99€ →</a>
+        </div>
+        <p style="color:var(--grey); font-size:13px;">Disponible en Amazon España y resto de Europa.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section style="padding:64px 0; border-top:1px solid var(--line); background:#f7f8fa;">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Para quién es</span>
+      <h2>Dirigido a</h2>
+    </div>
+    <p style="color:var(--grey); font-size:15px; line-height:1.75; max-width:720px; margin:0 auto; text-align:center;">
+      Quien parte de una base técnica razonable —redes, web, línea de comandos— y quiere cazar su primera recompensa real, y también quien ya ha enviado algún informe y no entiende todavía por qué le rebotan más de los que le aceptan.
+    </p>
+  </div>
+</section>
+
+<section class="about" style="border-top:1px solid var(--line);">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow">Sobre la autora</span>
+        <h2>Nieves Casquero</h2>
+        <p>Especialista en ciberseguridad ofensiva y Perito Informático de Parte, Colegiada AEPEJU. Este libro recoge la misma metodología de reconocimiento y caza de vulnerabilidades que aplica en cada auditoría y pentest real.</p>
+        <a href="sobre-mi.html" class="btn btn-ghost" style="margin-top:8px;">Conocer su trayectoria completa →</a>
+      </div>
+      <div class="about-card">
+        <h4>Ficha del libro</h4>
+        <div class="verif-row"><span class="platform">Autora</span><span>Nieves Casquero</span><span class="verif-status">Perito AEPEJU</span></div>
+        <div class="verif-row"><span class="platform">Estructura</span><span>23 capítulos</span><span class="verif-status">+ Apéndice</span></div>
+        <div class="verif-row"><span class="platform">Formato</span><span>Tapa blanda / Kindle</span><span class="verif-status">Español</span></div>
+        <div class="verif-row"><span class="platform">Nivel</span><span>Base técnica razonable</span><span class="verif-status">Redes, web, CLI</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:80px 0; border-top:1px solid var(--line);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Antes de comprarlo, quizá esto ya te lo responde</h2>
+    </div>
+    <div class="faq-grid">
+      <div>
+        <h4 style="font-size:16px; margin-bottom:8px;">¿En qué formatos está disponible?</h4>
+        <p style="font-size:14.5px; color:var(--grey); line-height:1.65;">En tapa blanda (18,71€) y en versión digital para Kindle (7,99€), ambos a través de Amazon.</p>
+      </div>
+      <div>
+        <h4 style="font-size:16px; margin-bottom:8px;">¿Necesito conocimientos previos para leerlo?</h4>
+        <p style="font-size:14.5px; color:var(--grey); line-height:1.65;">Sí, está pensado para quien parte de una base técnica razonable en redes, web y línea de comandos y quiere cazar su primera recompensa real, y también para quien ya ha enviado algún informe y no entiende todavía por qué le rebotan más de los que le aceptan.</p>
+      </div>
+      <div>
+        <h4 style="font-size:16px; margin-bottom:8px;">¿Incluye plantillas utilizables directamente?</h4>
+        <p style="font-size:14.5px; color:var(--grey); line-height:1.65;">Sí, el apéndice incluye informe de bug bounty, checklist de reconocimiento y checklist previa al envío, listos para adaptar a tu primer caso real.</p>
+      </div>
+      <div>
+        <h4 style="font-size:16px; margin-bottom:8px;">¿El capítulo de fiscalidad aplica fuera de España?</h4>
+        <p style="font-size:14.5px; color:var(--grey); line-height:1.65;">No, ese capítulo está enfocado específicamente en la fiscalidad española (IVA, IRPF, modelo 130, alta como autónomo). El resto del libro —metodología, reconocimiento y redacción de informes— es igual de útil para cualquier país.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:64px 0; background:var(--navy);">
+  <div class="container">
+    <div style="max-width:640px; margin:0 auto; text-align:center;">
+      <span class="eyebrow" style="color:#f0a8a8;">¿Necesitas una auditoría o un pentest?</span>
+      <h2 style="color:#fff; font-size:clamp(20px,3vw,26px); margin:10px 0 14px;">Aplico esta misma metodología de caza de vulnerabilidades en cada encargo real</h2>
+      <p style="color:#b9c6d6; font-size:14.5px; line-height:1.6; margin-bottom:26px;">Auditorías, pentesting y forense digital para empresas y particulares en toda España.</p>
+      <a href="servicios.html" class="btn btn-primary">Ver servicios →</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="contact-inner">
+      <span class="eyebrow" style="color:#f0a8a8;">Contacto</span>
+      <h2>¿Tienes alguna duda sobre el libro?</h2>
+      <p>Escríbeme y te respondo directamente.</p>
+      <div class="contact-ctas">
+        <a href="mailto:nieveskaskero@hotmail.com" class="btn btn-primary">Escribir ahora →</a>
+      </div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/nieves-kaskero" target="_blank" rel="noopener">↗ LinkedIn</a>
+        <a href="https://www.instagram.com/nieves.casquero" target="_blank" rel="noopener">↗ Instagram</a>
+        <a href="https://www.facebook.com/share/19HUsCCESJ/" target="_blank" rel="noopener">↗ Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="libro.html">DFIR y Peritaje</a>
+      <a href="bug-bounty.html">Bug Bounty</a>
+      <a href="index.html#contacto">Contacto</a>
+    </div>
+    © 2026 Nieves Casquero · Ciberseguridad para empresas y particulares · España
+  </div>
+</footer>
+
+
+<!-- Botón flotante WhatsApp -->
+<style>
+@keyframes wa-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.55); }
+  70% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+.wa-float-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  text-decoration: none;
+  animation: wa-pulse 2.5s infinite;
+  transition: transform 0.2s ease;
+}
+.wa-float-btn:hover { transform: scale(1.08); }
+@media (max-width: 480px) {
+  .wa-float-btn { width: 52px; height: 52px; bottom: 16px; right: 16px; }
+}
+@media (max-width: 700px) {
+  section > .container > div[style*="grid-template-columns:320px 1fr"] { grid-template-columns: 1fr !important; }
+}
+</style>
+<a class="wa-float-btn" href="https://wa.me/34655276573?text=Hola%20Nieves%2C%20tengo%20una%20pregunta%20sobre%20tu%20libro%20Bug%20Bounty" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+<svg viewBox="0 0 32 32" width="30" height="30" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M16 .5C7.44.5.5 7.44.5 16c0 2.82.74 5.47 2.03 7.76L.5 31.5l7.94-2.08A15.44 15.44 0 0 0 16 31.5c8.56 0 15.5-6.94 15.5-15.5S24.56.5 16 .5zm0 28.13c-2.5 0-4.85-.7-6.86-1.92l-.49-.29-4.71 1.23 1.26-4.6-.32-.47A12.86 12.86 0 0 1 3.13 16C3.13 8.9 8.9 3.13 16 3.13S28.88 8.9 28.88 16 23.1 28.88 16 28.88zm7.06-9.65c-.39-.2-2.3-1.13-2.66-1.26-.36-.13-.62-.2-.88.2-.26.39-1.01 1.26-1.24 1.52-.23.26-.46.29-.85.1-.39-.2-1.63-.6-3.11-1.92-1.15-1.02-1.92-2.29-2.15-2.68-.23-.39-.02-.6.17-.79.18-.18.39-.46.59-.69.2-.23.26-.39.39-.65.13-.26.07-.49-.03-.69-.1-.2-.88-2.12-1.2-2.9-.32-.76-.65-.66-.88-.67h-.75c-.26 0-.69.1-1.05.49-.36.39-1.37 1.34-1.37 3.27s1.4 3.79 1.6 4.05c.2.26 2.76 4.21 6.69 5.9.94.4 1.67.64 2.24.82.94.3 1.8.26 2.48.16.76-.11 2.3-.94 2.62-1.85.32-.91.32-1.69.23-1.85-.1-.16-.36-.26-.75-.46z"/></svg>
+</a>
+
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fdaeefb7b23444c894f9a7be9984a4d9"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
