@@ -175,16 +175,32 @@
 
 <section style="padding:16px 0 0;">
   <div class="container">
-    <div style="background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); padding:32px; display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between;">
-      <div style="max-width:520px;">
-        <span class="eyebrow" style="color:var(--gold);">Publicación técnica</span>
-        <h3 style="font-family:'Source Serif 4', Georgia, serif; color:var(--navy); font-size:20px; margin:8px 0 8px;">He escrito un manual técnico: "DFIR y Peritaje Judicial"</h3>
-        <p style="color:var(--grey); font-size:14.5px; line-height:1.6; margin:0;">Informática forense, respuesta a incidentes y procedimiento judicial español, con herramientas reales y plantillas listas para usar. Dirigido a peritos y profesionales DFIR.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:20px;">
+
+      <div style="background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); padding:32px; display:flex; flex-direction:column; gap:18px;">
+        <div>
+          <span class="eyebrow" style="color:var(--gold);">Publicación técnica</span>
+          <h3 style="font-family:'Source Serif 4', Georgia, serif; color:var(--navy); font-size:20px; margin:8px 0 8px;">He escrito un manual técnico: "DFIR y Peritaje Judicial"</h3>
+          <p style="color:var(--grey); font-size:14.5px; line-height:1.6; margin:0;">Informática forense, respuesta a incidentes y procedimiento judicial español, con herramientas reales y plantillas listas para usar. Dirigido a peritos y profesionales DFIR.</p>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="libro.html" class="btn btn-ghost">Ver ficha completa →</a>
+          <a href="https://amzn.eu/d/00NXo67c" target="_blank" rel="noopener" class="btn btn-primary">Comprarlo en Amazon →</a>
+        </div>
       </div>
-      <div style="display:flex; gap:12px; flex-wrap:wrap; flex-shrink:0;">
-        <a href="libro.html" class="btn btn-ghost">Ver ficha completa →</a>
-        <a href="https://amzn.eu/d/00NXo67c" target="_blank" rel="noopener" class="btn btn-primary">Comprarlo en Amazon →</a>
+
+      <div style="background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); padding:32px; display:flex; flex-direction:column; gap:18px;">
+        <div>
+          <span class="eyebrow" style="color:var(--gold);">Publicación técnica</span>
+          <h3 style="font-family:'Source Serif 4', Georgia, serif; color:var(--navy); font-size:20px; margin:8px 0 8px;">También escribí: "Bug Bounty: De Cero a Tu Primera Recompensa"</h3>
+          <p style="color:var(--grey); font-size:14.5px; line-height:1.6; margin:0;">Metodología real de reconocimiento, caza de vulnerabilidades y redacción de informes — con el único capítulo en español sobre fiscalidad de recompensas.</p>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="bug-bounty.html" class="btn btn-ghost">Ver ficha completa →</a>
+          <a href="https://www.amazon.es/dp/B0HHLCYS3S" target="_blank" rel="noopener" class="btn btn-primary">Comprarlo en Amazon →</a>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -214,7 +230,8 @@
       <a href="index.html">Inicio</a>
       <a href="servicios.html">Servicios</a>
       <a href="sobre-mi.html">Sobre mí</a>
-      <a href="libro.html">Libro</a>
+      <a href="libro.html">DFIR y Peritaje</a>
+      <a href="bug-bounty.html">Bug Bounty</a>
       <a href="index.html#contacto">Contacto</a>
     </div>
     © 2026 Nieves Casquero · Ciberseguridad para empresas y particulares · España
