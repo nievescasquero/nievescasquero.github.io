@@ -56,6 +56,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://nievescasquero.github.io/blog.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://nievescasquero.github.io/en/index.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -109,5 +114,10 @@
     <loc>https://nievescasquero.github.io/en/blog-recover-stolen-account.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://nievescasquero.github.io/en/blog.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
