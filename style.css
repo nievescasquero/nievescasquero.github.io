@@ -1,3 +1,17 @@
+/* ---------- MOBILE NAV TOGGLE ---------- */
+.nav-toggle{
+  display:none; flex-direction:column; justify-content:center; gap:5px;
+  width:34px; height:34px; background:none; border:none; cursor:pointer; padding:0; flex-shrink:0;
+}
+.nav-toggle span{display:block; width:100%; height:2px; background:var(--navy); border-radius:2px; transition:transform .2s ease, opacity .2s ease;}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{display:none; flex-direction:column; border-top:1px solid var(--line); background:#fff;}
+.mobile-menu a{padding:14px 28px; font-size:15px; font-weight:600; color:var(--navy); border-bottom:1px solid var(--line);}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu.open{display:flex;}
+
 :root{
   --navy:#102a43;
   --navy-2:#1a3a5c;
@@ -237,6 +251,7 @@ footer .footer-links a{color:#9fb0c2;} footer .footer-links a:hover{color:#fff;}
 .faq-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px 48px; max-width:980px; margin:0 auto;}
 
 @media (max-width: 900px){
+  .nav-toggle{display:flex;}
   .navlinks a:not(.nav-cta){display:none;}
   .navlinks .lang-switch{display:flex;}
   .navlinks .lang-switch a{display:inline-flex;}
