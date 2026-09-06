@@ -315,9 +315,128 @@
       <span class="eyebrow" style="color:#f0a8a8;">Contact</span>
       <h2>Need to protect your business, or deal with something personal?</h2>
       <p>First consultation free, by video call or email, no obligation. Tell me about your situation and I'll tell you exactly what I can do and how much it would cost.</p>
-      <div class="contact-ctas">
-        <a href="mailto:nieveskaskero@hotmail.com" class="btn btn-primary">Write now →</a>
+<style>
+.quick-form-card{
+  max-width:480px; margin:0 auto; text-align:left;
+  background:rgba(255,255,255,.045); border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius); padding:32px 30px;
+}
+.quick-form{display:grid; gap:16px;}
+.quick-form-field{display:grid; gap:6px;}
+.quick-form-field label{font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:#8fa3b8; font-weight:700;}
+.quick-form-field label span{text-transform:none; letter-spacing:0; font-weight:400; color:#6d8098;}
+.quick-form input, .quick-form textarea{
+  width:100%; padding:12px 14px; border:1.5px solid rgba(255,255,255,.18);
+  border-radius:2px; background:rgba(255,255,255,.05); color:#fff;
+  font-size:14.5px; font-family:inherit; box-sizing:border-box; transition:border-color .15s, background .15s;
+}
+.quick-form input::placeholder, .quick-form textarea::placeholder{color:#5f7690;}
+.quick-form input:focus, .quick-form textarea:focus{outline:none; border-color:var(--red-2); background:rgba(255,255,255,.09);}
+.quick-form textarea{resize:vertical; min-height:84px;}
+.quick-form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+.quick-form button{width:100%; justify-content:center; margin-top:2px;}
+.quick-form-trust{display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; font-size:12px; color:#8fa3b8; margin-top:2px;}
+.quick-form-trust-sep{color:rgba(255,255,255,.2);}
+.quick-form-success{text-align:center; padding:14px 4px;}
+.quick-success-check{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:46px; height:46px; border-radius:50%; background:rgba(62,207,142,.14);
+  border:1.5px solid #3ecf8e; color:#3ecf8e; font-size:22px; margin-bottom:14px;
+}
+.quick-form-success h4{font-family:'Source Serif 4',serif; color:#fff; font-size:19px; margin-bottom:8px;}
+.quick-form-success p{color:#b8c4d2; font-size:14.5px;}
+.quick-form-msg{font-size:13.5px; margin-top:12px; display:none; text-align:center;}
+.quick-form-msg.err{color:#f0a8a8; display:block;}
+.quick-form-alt{font-size:13px; color:#8fa3b8; margin-top:18px; text-align:center;}
+.quick-form-alt a{color:#cdd9e6; text-decoration:underline;}
+.quick-form-hp{position:absolute; left:-9999px; opacity:0; height:0; width:0; overflow:hidden;}
+@media (max-width:480px){ .quick-form-row{grid-template-columns:1fr;} .quick-form-card{padding:26px 20px;} }
+</style>
+
+<div class="contact-ctas">
+  <div class="quick-form-card">
+    <form id="nc-quick-form" class="quick-form">
+      <div class="quick-form-field">
+        <label for="nc-qf-nombre">Name</label>
+        <input type="text" id="nc-qf-nombre" name="nombre" placeholder="Your name" required>
       </div>
+      <div class="quick-form-row">
+        <div class="quick-form-field">
+          <label for="nc-qf-email">Email</label>
+          <input type="email" id="nc-qf-email" name="email" placeholder="you@email.com" required>
+        </div>
+        <div class="quick-form-field">
+          <label for="nc-qf-telefono">Phone <span>(optional)</span></label>
+          <input type="tel" id="nc-qf-telefono" name="telefono" placeholder="+34 600 000 000">
+        </div>
+      </div>
+      <div class="quick-form-field">
+        <label for="nc-qf-mensaje">Your situation</label>
+        <textarea id="nc-qf-mensaje" name="mensaje" placeholder="Tell me in 2-3 lines what you need" required></textarea>
+      </div>
+      <input type="text" name="_gotcha" class="quick-form-hp" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="New quick inquiry from the website">
+      <input type="hidden" name="pagina" id="nc-quick-page">
+      <button type="submit" id="nc-quick-submit" class="btn btn-primary">Send inquiry →</button>
+      <div class="quick-form-trust">
+        <span><span class="dot"></span> Response within 24h</span>
+        <span class="quick-form-trust-sep">·</span>
+        <span>GDPR-compliant data handling</span>
+      </div>
+      <p id="nc-quick-msg" class="quick-form-msg"></p>
+    </form>
+    <div id="nc-quick-success" class="quick-form-success" style="display:none;">
+      <span class="quick-success-check">&#10003;</span>
+      <h4>Message sent</h4>
+      <p>Thank you. I'll get back to you within 24 hours.</p>
+    </div>
+  </div>
+  <p class="quick-form-alt">
+    or write to me directly by <a href="mailto:nieveskaskero@hotmail.com">email</a> or
+    <a href="https://wa.me/34655276573?text=Hi%20Nieves%2C%20I%27m%20interested%20in%20your%20cybersecurity%20services" target="_blank" rel="noopener">WhatsApp</a>.
+  </p>
+</div>
+
+<script>
+(function(){
+  var FORM_ENDPOINT = "https://formspree.io/f/mwlkbbgp";
+  var form = document.getElementById('nc-quick-form');
+  var msg = document.getElementById('nc-quick-msg');
+  var successBox = document.getElementById('nc-quick-success');
+  var submitBtn = document.getElementById('nc-quick-submit');
+  var pageField = document.getElementById('nc-quick-page');
+  if (!form) return;
+
+  if (pageField) pageField.value = document.title + " - " + window.location.href;
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    msg.className = 'quick-form-msg';
+    var originalLabel = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    }).then(function(res){
+      if (res.ok) {
+        form.style.display = 'none';
+        successBox.style.display = 'block';
+      } else {
+        throw new Error('bad response');
+      }
+    }).catch(function(){
+      msg.textContent = "Something went wrong. Email me at nieveskaskero@hotmail.com and we'll sort it out directly.";
+      msg.className = 'quick-form-msg err';
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    });
+  });
+})();
+</script>
+
       <div class="contact-links">
         <a href="https://www.linkedin.com/in/nieves-kaskero" target="_blank" rel="noopener">↗ LinkedIn</a>
         <a href="https://www.instagram.com/nieves.casquero" target="_blank" rel="noopener">↗ Instagram</a>
